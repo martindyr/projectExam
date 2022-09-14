@@ -5,5 +5,5 @@
 const footer = document.querySelector("footer")
 
 // Generating HTML
-footer.innerHTML = `Test`
+footer.innerHTML = ``
 

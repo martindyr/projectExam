@@ -8,7 +8,7 @@ const header = document.querySelector("header")
 header.innerHTML = `
 <nav>
     <div>
-    <!-- Logo -->
+    <img src="/images/logo.svg"></img>
     </div>
     <ul>
         <li><a href="index.html">Home</a></li>
