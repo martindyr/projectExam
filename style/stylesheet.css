@@ -4,11 +4,38 @@
     padding: 0;
 }
 
-/* INDEX */
-
 /* FOOTER */
 
 /* HEADER */
+
+/* INDEX */
+
+
+/* CONTACT */
+
+form {
+    width: 400px;
+    height: auto;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#nameError,
+#emailError,
+#subjectError,
+#messageError {
+    display: none;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 100px;
+    height: 60px;
+    min-height: 20px;
+}
 
 /* LOADER */
 
