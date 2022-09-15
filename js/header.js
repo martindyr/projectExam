@@ -8,15 +8,48 @@ const header = document.querySelector("header")
 header.innerHTML = `
 <nav>
     <div>
-    <img src="/images/logo.svg"></img>
+    <a href="index.html"><img src="/images/logo.svg"></img></a>
     </div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Browse recepies</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a id="home" href="index.html">Home</a></li>
+        <li><a id="browseRecepies" href="postList.html">Browse recepies</a></li>
+        <li><a id="about" href="about.html">About</a></li>
+        <li><a id="contact" href="contact.html">Contact</a></li>
         <li><a href="">Suprise me</a></li>
     </ul>
 </nav>
 `
+
+// Target NAV Buttons
+const aboutBtn = document.querySelector("#about")
+const browseRecepiesBtn = document.querySelector("#browseRecepies")
+const homeBtn = document.querySelector("#home")
+const contactBtn = document.querySelector("#contact")
+
+// If pathname ends with ("X") apply the style to the nav button
+function currentHeader() {
+    if (window.location.pathname.endsWith("about.html")) {
+        aboutBtn.style.opacity = "1";
+        aboutBtn.style.fontSize = "17px";
+    }
+    if (window.location.pathname.endsWith("index.html")) {
+        homeBtn.style.opacity = "1";
+        homeBtn.style.fontSize = "17px";
+    }
+    if (window.location.pathname.endsWith("contact.html")) {
+        contactBtn.style.opacity = "1";
+        contactBtn.style.fontSize = "17px";
+    }
+    if (window.location.pathname.endsWith("postList.html")) {
+        browseRecepiesBtn.style.opacity = "1";
+        browseRecepiesBtn.style.fontSize = "17px";
+    }
+}
+
+// Run the function when the page loads
+window.onload = currentHeader()
+
+
+
+
 
