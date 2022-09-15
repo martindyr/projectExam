@@ -19,7 +19,7 @@ header.innerHTML = `
     </div>
     <div id="phoneMenu">
         <img id="phoneMenuIcon" src="/images/hamburgerMenu.svg" alt=""></img>
-        <a href="index.html"><img src="/images/logo.svg"></img></a>
+        <a id="logoLink" href="index.html"><img id="phoneLogo" src="/images/logo.svg"></img></a>
         <div></div>
     </div>
 </nav>

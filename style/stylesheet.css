@@ -161,19 +161,33 @@ textarea {
         display: block;
 
         padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
         gap: 15px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        justify-items: center;
 
     }
 
     #phoneMenuIcon {
-        padding-bottom: 30px;
-        padding-left: 40px;
+        padding-bottom: 15px;
     }
+
 
     #monitorMenu {
         display: none;
+    }
+
+    #phoneLogo {
+        height: 70%;
+        width: auto;
+    }
+
+    #logoLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
