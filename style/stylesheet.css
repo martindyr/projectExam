@@ -94,6 +94,7 @@ input {
 #subjectError,
 #messageError {
     display: none;
+    color: red;
 }
 
 textarea {
