@@ -3,9 +3,12 @@
 
 // Target footer
 const footer = document.querySelector("footer")
+const navMenu = document.querySelector("#navMenu")
+
 
 // Generating HTML
 footer.innerHTML = `
 
+${navMenu.innerHTML}
 `
 

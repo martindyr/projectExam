@@ -14,15 +14,23 @@ body {
 }
 
 main {
-    /* TODO SET HIGHT TO 100VH CALC - height footer and header */
-    animation-name: none;
+    min-height: calc(100vh - 217px);
+    display: flex;
+    justify-content: center;
+
 }
 
 /* FOOTER */
 
+footer {
+    background-color: #34292e;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* HEADER */
 
-nav {
+#monitorMenu {
     padding-top: 20px;
     gap: 15px;
     display: flex;
@@ -66,8 +74,9 @@ a:hover {
     opacity: 1;
 }
 
-
-
+#phoneMenu {
+    display: none;
+}
 
 /* INDEX */
 
@@ -75,12 +84,14 @@ a:hover {
 /* CONTACT */
 
 form {
+    padding: 20px;
     width: 400px;
-    height: auto;
+    height: fit-content;
     border: 1px solid white;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    align-self: center;
     gap: 15px;
 }
 
@@ -106,7 +117,7 @@ input {
 #subjectError,
 #messageError {
     display: none;
-    color: red;
+    color: crimson;
 }
 
 textarea {
@@ -141,5 +152,28 @@ textarea {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #phoneMenu {
+        display: block;
+
+        padding-top: 20px;
+        gap: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    #phoneMenuIcon {
+        padding-bottom: 30px;
+        padding-left: 40px;
+    }
+
+    #monitorMenu {
+        display: none;
     }
 }
