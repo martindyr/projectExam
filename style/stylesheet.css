@@ -158,21 +158,11 @@ textarea {
 @media only screen and (max-width: 650px) {
 
     #phoneMenu {
-        display: block;
-
-        padding-top: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
-        gap: 15px;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        justify-items: center;
-
     }
 
     #phoneMenuIcon {
-        padding-bottom: 15px;
     }
 
 
@@ -186,8 +176,6 @@ textarea {
     }
 
     #logoLink {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
     }
 }
