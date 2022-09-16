@@ -159,23 +159,23 @@ textarea {
 
     #phoneMenu {
         display: flex;
-        justify-content: space-between;
+        padding: 0 20px;
     }
-
-    #phoneMenuIcon {
-    }
-
 
     #monitorMenu {
         display: none;
     }
 
     #phoneLogo {
-        height: 70%;
-        width: auto;
+        height: auto;
+        width: 300px;
     }
 
     #logoLink {
-
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
     }
 }
