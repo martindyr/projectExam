@@ -172,6 +172,11 @@ textarea {
 
 @media only screen and (max-width: 900px) {
 
+    .header {
+        height: auto;
+        width: 120%;
+    }
+
     #phoneMenu {
         display: flex;
         padding: 0 20px;
