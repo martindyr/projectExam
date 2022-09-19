@@ -7,8 +7,7 @@ const navMenu = document.querySelector("#navMenu")
 
 
 // Generating HTML
-footer.innerHTML = `
 
-${navMenu.innerHTML}
-`
+footer.innerHTML = `
+${header.innerHTML}`
 
