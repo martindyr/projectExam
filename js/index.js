@@ -49,7 +49,10 @@ function loadDinners() {
     for (let i = posts; i < posts + 3; i++) {
         dinnerContainer.innerHTML +=
             `<img src="" alt=""></img>
-            <p>${dinnerObject[i].title.rendered}</p>`
+            <a href="postDetails.html?id=${dinnerObject[i].id}" class="pokemonCard">
+            <p>${dinnerObject[i].title.rendered}</p>
+            </a>`
+
     }
     posts += 3
 }
