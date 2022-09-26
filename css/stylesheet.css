@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+/* EVERY PAGE */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #24292e;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main {
+    min-height: calc(100vh - 217px);
+
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #34292e;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    #phoneFooter {}
+
+}
+
+/* HEADER */
+
+#monitorMenu {
+    padding-top: 2.5%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    padding-bottom: 10%;
+}
+
+ul {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+a,
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+    color: wheat;
+    gap: 10px;
+}
+
+li {
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    opacity: 0.75;
+    transition: 250ms;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+}
+
+a:hover {
+    font-size: 21px;
+    opacity: 1;
+}
+
+#phoneMenu {
+    display: none;
+}
+
+/* INDEX */
+
+.header {
+    height: auto;
+    width: 100%;
+}
+
+
+/* CONTACT */
+
+form {
+    padding: 20px;
+    width: 400px;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 15px;
+}
+
+label {
+    color: white;
+}
+
+input {
+    background-color: #24292e;
+    border: 1px solid white;
+    border-radius: 4px;
+    height: 25px;
+    color: #fff;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#nameError,
+#emailError,
+#subjectError,
+#messageError {
+    display: none;
+    color: crimson;
+}
+
+textarea {
+    max-width: 99.5%;
+    min-width: 99.5%;
+    max-height: 100px;
+    height: 60px;
+    min-height: 20px;
+    background-color: #24292e;
+    border: 1px solid white;
+    border-radius: 4px;
+
+}
+
+/* LOADER */
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .header {
+        height: auto;
+        width: 120%;
+    }
+
+    #phoneMenu {
+        display: flex;
+        padding: 0 20px;
+    }
+
+    #monitorMenu {
+        display: none;
+    }
+
+    #phoneLogo {
+        height: auto;
+        width: 80%;
+        min-width: 150px;
+    }
+
+    #phoneMenuIcon {
+        height: auto;
+        width: 7%;
+    }
+
+    #logoLink {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3%;
+    }
+}
+
+/* IMAGE ZOOM */
+
+#popUP {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    z-index: 10;
+}
+
+#shadowContainer {
+    display: none;
+
+    height: 9999px;
+    width: 9999px;
+    background-color: black;
+    opacity: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

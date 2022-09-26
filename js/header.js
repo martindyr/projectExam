@@ -34,19 +34,23 @@ const contactBtn = document.querySelector("#contact")
 function currentHeader() {
     if (window.location.pathname.endsWith("about.html")) {
         aboutBtn.style.opacity = "1";
-        aboutBtn.style.fontSize = "17px";
+        aboutBtn.style.fontSize = "18px";
     }
     if (window.location.pathname.endsWith("index.html")) {
         homeBtn.style.opacity = "1";
-        homeBtn.style.fontSize = "17px";
+        homeBtn.style.fontSize = "18px";
     }
     if (window.location.pathname.endsWith("contact.html")) {
         contactBtn.style.opacity = "1";
-        contactBtn.style.fontSize = "17px";
+        contactBtn.style.fontSize = "18px";
     }
-    if (window.location.pathname.endsWith("postlist" || "postList.html")) {
+    if (window.location.pathname.endsWith("postList.html")) {
         browseRecepiesBtn.style.opacity = "1";
-        browseRecepiesBtn.style.fontSize = "17px";
+        browseRecepiesBtn.style.fontSize = "18px";
+    }
+    if (window.location.pathname.endsWith("postDetails.html")) {
+        browseRecepiesBtn.style.opacity = "1";
+        browseRecepiesBtn.style.fontSize = "18px";
     }
 }
 

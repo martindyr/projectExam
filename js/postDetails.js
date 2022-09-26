@@ -32,6 +32,8 @@ function createHtml(details) {
     // Changning the document title to the post name
     document.title = details.title.rendered
 
-    detailsContainer.innerHTML = `<p style="padding-left: 5px"></p>`
+    detailsContainer.innerHTML = `
+<img src="" alt=""></img>
+    `
 
 }

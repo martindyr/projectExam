@@ -48,16 +48,30 @@ function loadDinners() {
 
     for (let i = posts; i < posts + 3; i++) {
         dinnerContainer.innerHTML +=
-            `<img src="" alt=""></img>
-            <a href="postDetails.html?id=${dinnerObject[i].id}" class="pokemonCard">
-            <p>${dinnerObject[i].title.rendered}</p>
-            </a>`
+            `
+            <a href="postDetails.html?id=${dinnerObject[i].id}">navigate</a>
+            <a href="">
+                <p>Food name: ${dinnerObject[i].title.rendered}</p>
+            </a>
+            
+            </br>
+            `
 
     }
     posts += 3
 }
-
 getAllPosts()
+
+const shadowContainer = document.querySelector("#shadowContainer")
+
+function zoom() {
+    shadowContainer.style.display = "block"
+
+}
+
+function removeZoom() {
+    shadowContainer.style.display = "none"
+}
 
 
 
