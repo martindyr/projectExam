@@ -12,7 +12,6 @@ const dinnerContainer = document.querySelector("#dinner")
 // A place to store only dinners
 const dinnerObject = []
 
-
 //Fetching API from Wordpress
 async function getAllPosts() {
     try {
@@ -23,14 +22,12 @@ async function getAllPosts() {
 
         // Making a object with only dinners
         for (let i = 0; i < allPosts.length; i++) {
-            if (allPosts[i].categories[0] === 17) {
+            if (allPosts[i].categories[0] === 20) {
                 dinnerObject.push(allPosts[i])
             }
         }
         console.log(dinnerObject)
         loadDinners()
-
-
 
     } catch {
         alert("Sorry chef, this website is currenty not working. I'm sorry for the inconvinience this has caused you.")
@@ -49,16 +46,15 @@ function loadDinners() {
     for (let i = posts; i < posts + 3; i++) {
         dinnerContainer.innerHTML +=
             `
-            <a href="postDetails.html?id=${dinnerObject[i].id}">navigate</a>
-            <a href="">
+            <div>
+                <a href="postDetails.html?id=${dinnerObject[i].id}">navigate</a>
                 <p>Food name: ${dinnerObject[i].title.rendered}</p>
-            </a>
-            
-            </br>
+                <img src="${dinnerObject[i].jetpack_featured_media_url}"></img>
+            </div>
             `
-
     }
     posts += 3
+    console.log(dinnerContainer)
 }
 getAllPosts()
 

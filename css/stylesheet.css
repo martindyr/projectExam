@@ -80,7 +80,7 @@ li {
     justify-content: center;
 }
 
-a {
+nav a {
     opacity: 0.75;
     transition: 250ms;
     font-size: 19px;
@@ -88,7 +88,7 @@ a {
     font-family: 'Abel', sans-serif;
 }
 
-a:hover {
+nav a:hover {
     font-size: 21px;
     opacity: 1;
 }

@@ -8,11 +8,5 @@ const navMenu = document.querySelector("#navMenu")
 
 // Generating HTML
 
-footer.innerHTML = `
-<div id="phoneFooter">
-    <a href="images/dinner.svg"><img src="" alt=""> </img></a>
-    <a href="images/dinner.svg"><img src="" alt=""> </img></a>
-    <a href="images/dinner.svg"><img src="" alt=""> </img></a>
-</div>
-`
+footer.innerHTML = ``
 
