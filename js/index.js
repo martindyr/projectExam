@@ -57,7 +57,7 @@ function loadDinners() {
     console.log(dinnerContainer)
 }
 getAllPosts()
-
+/* 
 const shadowContainer = document.querySelector("#shadowContainer")
 
 function zoom() {
@@ -67,7 +67,7 @@ function zoom() {
 
 function removeZoom() {
     shadowContainer.style.display = "none"
-}
+} */
 
 
 
