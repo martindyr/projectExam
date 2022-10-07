@@ -104,6 +104,11 @@ nav a:hover {
     width: 100%;
 }
 
+.carousellContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* CONTACT */
 

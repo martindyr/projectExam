@@ -34,7 +34,7 @@ async function getAllPosts() {
     }
 }
 
-// Show 3 dinners
+// Show 3 dinners on page load
 // Every time button is pressed - show 3 more dinners
 
 loadBtn.addEventListener("click", loadDinners)
