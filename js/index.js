@@ -1,7 +1,7 @@
 // ==== LOAD MORE DINNERS ===
 
 // API get request link
-const url = "http://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts"
+const url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts"
 
 // Button to load more dinners
 const loadBtn = document.querySelector("#loadBtn")
@@ -57,6 +57,7 @@ function loadDinners() {
     console.log(dinnerContainer)
 }
 getAllPosts()
+
 /* 
 const shadowContainer = document.querySelector("#shadowContainer")
 
