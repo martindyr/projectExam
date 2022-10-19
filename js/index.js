@@ -28,6 +28,7 @@ async function getAllPosts() {
         }
         console.log(dinnerObject)
         loadDinners()
+        generateCarousel(allPosts)
 
     } catch {
         alert("Sorry chef, this website is currenty not working. I'm sorry for the inconvinience this has caused you.")
@@ -69,6 +70,65 @@ function zoom() {
 function removeZoom() {
     shadowContainer.style.display = "none"
 } */
+
+// CAROUSEL
+// Select html used to interact with carousel
+const previousSlide = document.querySelector("#prevSlide")
+const nextSlide = document.querySelector("#nextSlide")
+const carousel = document.querySelector(".carouselTrackContainer")
+
+function generateCarousel(allPosts) {
+    carousel.innerHTML += `
+    <div id="carouselTrack" class="carouselTrack">
+
+        <div id="carouselSlide1" class="carouselSlide">
+            <div class="carouselSlideGroup">
+                <div>
+                    <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="carouselSlide2" class="carouselSlide">
+            <div class="carouselSlideGroup">
+                <div>
+                    <img class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="carouselSlide3" class="carouselSlide">
+            <div class="carouselSlideGroup">
+                <div>
+                    <img class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
+                </div>
+                <div>
+                    <img class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    `
+}
+
+
+
 
 
 

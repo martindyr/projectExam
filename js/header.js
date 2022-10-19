@@ -18,8 +18,9 @@ header.innerHTML = `
             </ul>
     </div>
     <div id="phoneMenu">
-        <img id="phoneMenuIcon" src="/images/hamburgerMenu.svg" alt=""></img>
-        <a id="logoLink" href="index.html"><img id="phoneLogo" src="/images/logo.svg"></img></a>
+        <div></div>
+        <img src="/images/dinner.svg" alt=""></img>
+        <div></div>
     </div>
 </nav>
 `
