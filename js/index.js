@@ -72,16 +72,15 @@ function removeZoom() {
 } */
 
 // CAROUSEL
-// Select html used to interact with carousel
-const previousSlide = document.querySelector("#prevSlide")
-const nextSlide = document.querySelector("#nextSlide")
 const carousel = document.querySelector(".carouselTrackContainer")
+
+
 
 function generateCarousel(allPosts) {
     carousel.innerHTML += `
-    <div id="carouselTrack" class="carouselTrack">
-
-        <div id="carouselSlide1" class="carouselSlide">
+    <div class="carouselTrack">
+ 
+        <div class="carouselSlide currentSlide">
             <div class="carouselSlideGroup">
                 <div>
                     <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
@@ -95,7 +94,7 @@ function generateCarousel(allPosts) {
             </div>
         </div>
 
-        <div id="carouselSlide2" class="carouselSlide">
+        <div class="carouselSlide">
             <div class="carouselSlideGroup">
                 <div>
                     <img class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
@@ -109,7 +108,7 @@ function generateCarousel(allPosts) {
             </div>
         </div>
 
-        <div id="carouselSlide3" class="carouselSlide">
+        <div class="carouselSlide">
             <div class="carouselSlideGroup">
                 <div>
                     <img class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
@@ -125,7 +124,52 @@ function generateCarousel(allPosts) {
 
     </div>
     `
+    // Select html used to interact with carousel
+    const prevBtn = document.querySelector(".carouselButtonLeft")
+    const nextBtn = document.querySelector(".carouselButtonRight")
+    const track = document.querySelector(".carouselTrack")
+    const slides = Array.from(track.children)
+
+    const slideWidth = slides[0].getBoundingClientRect().width
+
+    slides[0].style.left = slideWidth * 0 + 'px'
+    slides[1].style.left = slideWidth * 1 + 'px'
+    slides[2].style.left = slideWidth * 2 + 'px'
+
+    nextBtn.addEventListener('click', e => {
+        const currentSlide = track.querySelector(".currentSlide");
+        const nextSlide = currentSlide.nextElementSibling;
+        const amountToMove = nextSlide.style.left;
+
+        track.style.transform = 'translateX(-' + amountToMove + ')'
+        currentSlide.classList.remove('currentSlide')
+        nextSlide.classList.add('currentSlide')
+        if (slides === 2) {
+            console.log("This is the last slide")
+        }
+
+    })
+
+    prevBtn.addEventListener('click', e => {
+        const currentSlide = track.querySelector(".currentSlide");
+        const prevSlide = currentSlide.previousElementSibling;
+        const amountToMove = prevSlide.style.left;
+
+        track.style.transform = 'translateX(-' + amountToMove + ')'
+        currentSlide.classList.remove('currentSlide')
+        prevSlide.classList.add('currentSlide')
+    })
+
+    /*     if (!nextSlide || !prevSlide) {
+            nextBtn.style.display = "hidden"
+        } */
+
+
 }
+
+
+
+
 
 
 

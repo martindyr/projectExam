@@ -110,7 +110,7 @@ nav a:hover {
 
 .carousel {
     width: 100%;
-    height: 20%;
+    height: 500px;
 }
 
 .carouselImg {
@@ -119,6 +119,9 @@ nav a:hover {
 
 .carouselTrackContainer {
     position: relative;
+    overflow: hidden;
+    height: 100%;
+
 }
 
 .carouselSlide {
@@ -126,30 +129,33 @@ nav a:hover {
     top: 0;
     bottom: 0;
     width: 100%;
+
 }
 
 .carouselSlideGroup {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
 }
 
 .carouselButton {
     background: transparent;
     border: 0;
     cursor: pointer;
+
 }
 
 .carouselButtonLeft {
     position: relative;
-    left: 110%;
-    top: 25%;
+    left: -10%;
+    top: 35%;
 }
 
 .carouselButtonRight {
     position: relative;
-    left: -10%;
-    top: 35%;
+    left: 110%;
+    top: -75%;
 }
 
 /* CONTACT */
