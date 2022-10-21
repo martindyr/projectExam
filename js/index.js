@@ -73,9 +73,6 @@ function removeZoom() {
 
 // CAROUSEL
 const carousel = document.querySelector(".carouselTrackContainer")
-
-
-
 function generateCarousel(allPosts) {
     carousel.innerHTML += `
     <div class="carouselTrack">
@@ -126,11 +123,16 @@ function generateCarousel(allPosts) {
     `
     // Select html used to interact with carousel
     const prevBtn = document.querySelector(".carouselButtonLeft")
+    /* const prevBtnImg = document.querySelector(".carouselButtonImgLeft") */
     const nextBtn = document.querySelector(".carouselButtonRight")
+    /* const nextBtnImg = document.querySelector(".carouselButtonImgRight") */
     const track = document.querySelector(".carouselTrack")
     const slides = Array.from(track.children)
 
     const slideWidth = slides[0].getBoundingClientRect().width
+
+    prevBtn.style.opacity = 0.5
+
 
     slides[0].style.left = slideWidth * 0 + 'px'
     slides[1].style.left = slideWidth * 1 + 'px'
@@ -144,8 +146,10 @@ function generateCarousel(allPosts) {
         track.style.transform = 'translateX(-' + amountToMove + ')'
         currentSlide.classList.remove('currentSlide')
         nextSlide.classList.add('currentSlide')
-        if (slides === 2) {
+        prevBtn.style.opacity = 1
+        if (nextSlide.style.left === 1680 + 'px') {
             console.log("This is the last slide")
+            nextBtn.style.opacity = 0.3
         }
 
     })
@@ -158,13 +162,12 @@ function generateCarousel(allPosts) {
         track.style.transform = 'translateX(-' + amountToMove + ')'
         currentSlide.classList.remove('currentSlide')
         prevSlide.classList.add('currentSlide')
+        nextBtn.style.opacity = 1
+        if (prevSlide.style.left === slideWidth * 0 + 'px') {
+            console.log("This is the first slide")
+            prevBtn.style.opacity = 0.3
+        }
     })
-
-    /*     if (!nextSlide || !prevSlide) {
-            nextBtn.style.display = "hidden"
-        } */
-
-
 }
 
 
