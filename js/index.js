@@ -74,18 +74,18 @@ function removeZoom() {
 // CAROUSEL
 const carousel = document.querySelector(".carouselTrackContainer")
 function generateCarousel(allPosts) {
-    carousel.innerHTML += `
+    carousel.innerHTML = `
     <div class="carouselTrack">
  
         <div class="carouselSlide currentSlide">
             <div class="carouselSlideGroup">
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
                 </div>
             </div>
@@ -93,13 +93,13 @@ function generateCarousel(allPosts) {
 
         <div class="carouselSlide">
             <div class="carouselSlideGroup">
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
                 </div>
             </div>
@@ -107,13 +107,13 @@ function generateCarousel(allPosts) {
 
         <div class="carouselSlide">
             <div class="carouselSlideGroup">
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
                 </div>
-                <div>
+                <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
                 </div>
             </div>
@@ -123,21 +123,24 @@ function generateCarousel(allPosts) {
     `
     // Select html used to interact with carousel
     const prevBtn = document.querySelector(".carouselButtonLeft")
-    /* const prevBtnImg = document.querySelector(".carouselButtonImgLeft") */
+    const prevBtnImg = document.querySelector(".carouselButtonImgLeft")
     const nextBtn = document.querySelector(".carouselButtonRight")
-    /* const nextBtnImg = document.querySelector(".carouselButtonImgRight") */
+    const nextBtnImg = document.querySelector(".carouselButtonImgRight")
     const track = document.querySelector(".carouselTrack")
     const slides = Array.from(track.children)
-
     const slideWidth = slides[0].getBoundingClientRect().width
 
-    prevBtn.style.opacity = 0.5
+    // When carousel is loaded - disable prev-button
+    prevBtn.style.opacity = 0.3
+    prevBtn.style.cursor = 'default'
+    prevBtnImg.style.opacity = 0.3
 
 
     slides[0].style.left = slideWidth * 0 + 'px'
     slides[1].style.left = slideWidth * 1 + 'px'
     slides[2].style.left = slideWidth * 2 + 'px'
 
+    // Next slide
     nextBtn.addEventListener('click', e => {
         const currentSlide = track.querySelector(".currentSlide");
         const nextSlide = currentSlide.nextElementSibling;
@@ -146,14 +149,21 @@ function generateCarousel(allPosts) {
         track.style.transform = 'translateX(-' + amountToMove + ')'
         currentSlide.classList.remove('currentSlide')
         nextSlide.classList.add('currentSlide')
+
         prevBtn.style.opacity = 1
+        prevBtnImg.style.opacity = 1
+        prevBtnImg.style.cursor = 'pointer'
+
+        // Disable next-button at last slide
         if (nextSlide.style.left === 1680 + 'px') {
             console.log("This is the last slide")
             nextBtn.style.opacity = 0.3
+            nextBtnImg.style.opacity = 0.3
+            nextBtnImg.style.cursor = 'default'
+
         }
-
     })
-
+    // Previous slide
     prevBtn.addEventListener('click', e => {
         const currentSlide = track.querySelector(".currentSlide");
         const prevSlide = currentSlide.previousElementSibling;
@@ -162,10 +172,17 @@ function generateCarousel(allPosts) {
         track.style.transform = 'translateX(-' + amountToMove + ')'
         currentSlide.classList.remove('currentSlide')
         prevSlide.classList.add('currentSlide')
+
         nextBtn.style.opacity = 1
+        nextBtnImg.style.opacity = 1
+        nextBtnImg.style.cursor = 'pointer'
+
+        // Disable prev-button at first slide
         if (prevSlide.style.left === slideWidth * 0 + 'px') {
             console.log("This is the first slide")
             prevBtn.style.opacity = 0.3
+            prevBtnImg.style.opacity = 0.3
+            prevBtnImg.style.cursor = 'default'
         }
     })
 }

@@ -7,21 +7,24 @@ const header = document.querySelector("header")
 // Generating HTML
 header.innerHTML = `
 <nav>
+
     <div id="monitorMenu">
         <a href="index.html"><img src="/images/logo.svg"></img></a>
-            <ul>
-                <li><a id="home" href="index.html">Home</a></li>
-                <li><a id="browseRecepies" href="postList.html">Browse recepies</a></li>
-                <li><a id="about" href="about.html">About</a></li>
-                <li><a id="contact" href="contact.html">Contact</a></li>
-                <li><a href="">Suprise me</a></li>
-            </ul>
+        <ul>
+            <li><a id="home" href="index.html">Home</a></li>
+            <li><a id="browseRecepies" href="postList.html">Browse recepies</a></li>
+            <li><a id="about" href="about.html">About</a></li>
+            <li><a id="contact" href="contact.html">Contact</a></li>
+            <li><a href="">Suprise me</a></li>
+        </ul>
     </div>
+
     <div id="phoneMenu">
         <div></div>
         <img src="/images/dinner.svg" alt=""></img>
         <div></div>
     </div>
+
 </nav>
 `
 
@@ -35,23 +38,23 @@ const contactBtn = document.querySelector("#contact")
 function currentHeader() {
     if (window.location.pathname.endsWith("about.html")) {
         aboutBtn.style.opacity = "1";
-        aboutBtn.style.fontSize = "18px";
+        aboutBtn.style.fontSize = "21px";
     }
     if (window.location.pathname.endsWith("index.html")) {
         homeBtn.style.opacity = "1";
-        homeBtn.style.fontSize = "18px";
+        homeBtn.style.fontSize = "21px";
     }
     if (window.location.pathname.endsWith("contact.html")) {
         contactBtn.style.opacity = "1";
-        contactBtn.style.fontSize = "18px";
+        contactBtn.style.fontSize = "21px";
     }
     if (window.location.pathname.endsWith("postList.html")) {
         browseRecepiesBtn.style.opacity = "1";
-        browseRecepiesBtn.style.fontSize = "18px";
+        browseRecepiesBtn.style.fontSize = "21px";
     }
     if (window.location.pathname.endsWith("postDetails.html")) {
         browseRecepiesBtn.style.opacity = "1";
-        browseRecepiesBtn.style.fontSize = "18px";
+        browseRecepiesBtn.style.fontSize = "21px";
     }
 }
 

@@ -15,28 +15,55 @@
     <header>
         <!-- Generated in /js/header.js -->
     </header>
+
     <main>
+        <div class="sectionHeaderContainer">
+            <div>
+                <h2>Latest Posts</h2>
+            </div>
+        </div>
 
         <div class="carousel">
             <button class="carouselButton carouselButtonLeft">
                 <img class="carouselButtonImgLeft" src="images/prevSlide.svg" alt="Arrow pointing left">
             </button>
 
-            <div class="carouselTrackContainer"></div>
+            <div class="carouselTrackContainer">
+                <!-- Generated in /js/index.js -->
+
+                <!-- Carousel loader -->
+                <div class="carouselLoading">
+                    <div>
+                        <div class="cardLoading"></div>
+                    </div>
+                    <div>
+                        <div class="cardLoading"></div>
+                    </div>
+                    <div>
+                        <div class="cardLoading"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
 
             <button class="carouselButton carouselButtonRight">
                 <img class="carouselButtonImgRight" src="images/nextSlide.svg" alt="Arrow pointing right">
             </button>
         </div>
 
-        <img class="header" src="/images/serveThisTonight.svg" alt="Header for a food section">
+        <img class="sectionHeader" src="/images/serveThisTonight.svg" alt="Header for a food section">
+
+
         <div>
-            <div id="dinner">
-            </div>
+            <div id="dinner"></div>
             <button id="loadBtn">more dinners</button>
         </div>
+
         <div onclick="zoom()" id="zoomContainer">
         </div>
+
     </main>
     <footer>
         <!-- Generated in /js/footer.js -->
