@@ -9,11 +9,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    display: flex;
-    justify-content: center;
-}
-
 body {
     background-color: #24292e;
     display: flex;
@@ -133,12 +128,15 @@ nav a:hover {
 /* CAROUSEL */
 
 .carousel {
-    width: 100%;
-    height: 500px;
+    position: relative;
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
 }
 
 .carouselImg {
     width: 100%;
+    height: auto;
 }
 
 .carouselTrackContainer {
@@ -150,9 +148,14 @@ nav a:hover {
 .carouselSlide {
     position: absolute;
     top: 0;
-    bottom: 0;
+    left: 0;
     width: 100%;
     margin-top: 5px;
+}
+
+.currentSlide {
+    z-index: 10;
+    background-color: #24292e;
 }
 
 .carouselSlideGroup {
@@ -221,11 +224,35 @@ nav a:hover {
     }
 }
 
+/* POSTLIST */
+
+.postListContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.appetizerContainer,
+.dinnerContainer,
+.dessertContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.postListImg {
+    width: 70%;
+}
+
 /* CONTACT */
 
 form {
     padding: 20px;
-    width: 400px;
+    width: 30%;
+    margin: 0 auto;
     height: fit-content;
     border: 1px solid white;
     border-radius: 8px;
@@ -296,6 +323,10 @@ textarea {
 }
 
 @media only screen and (max-width: 900px) {
+    main {
+        padding-bottom: 160px;
+    }
+
     #monitorMenu {
         display: none;
     }
@@ -303,12 +334,13 @@ textarea {
     #phoneMenu {
         display: flex;
         justify-content: space-between;
-        height: 5%;
+        height: 50px;
         padding: 10px;
         background-color: #27252b;
         width: 100%;
         position: fixed;
         bottom: 0;
+        z-index: 50;
     }
 
     #phoneMenu Img {
@@ -322,27 +354,32 @@ textarea {
         padding: 20px;
         border-radius: 50% 50% 0% 0%;
         background-color: #27252b;
+        z-index: 50;
     }
 }
 
 /* IMAGE ZOOM */
 
-#popUP {
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    z-index: 10;
+.zoomedImg {
+    height: 70%;
+    width: auto;
+    z-index: 9;
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
 }
 
-#shadowContainer {
-    display: none;
 
-    height: 9999px;
-    width: 9999px;
-    background-color: black;
-    opacity: 50%;
-    z-index: 5;
-    position: absolute;
+.zoomedImgBackground {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 8;
+    position: fixed;
     top: 0;
     left: 0;
+
+    overflow-x: hidden;
 }

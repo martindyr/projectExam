@@ -4,13 +4,9 @@
 const url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts"
 
 // Button to load more dinners
-const loadBtn = document.querySelector("#loadBtn")
-
-// Element to display more dinner options
-const dinnerContainer = document.querySelector("#dinner")
-
-// A place to store only dinners
-const dinnerObject = []
+const loadDinnersBtn = document.querySelector("#loadDinnersBtn")
+// Button to load more desserts
+const loadDessertsBtn = document.querySelector("#loadDessertsBtn")
 
 //Fetching API from Wordpress
 async function getAllPosts() {
@@ -20,14 +16,6 @@ async function getAllPosts() {
         const allPosts = data
         console.log(allPosts)
 
-        // Making a object with only dinners
-        for (let i = 0; i < allPosts.length; i++) {
-            if (allPosts[i].categories[0] === 20) {
-                dinnerObject.push(allPosts[i])
-            }
-        }
-        console.log(dinnerObject)
-        loadDinners()
         generateCarousel(allPosts)
 
     } catch {
@@ -35,28 +23,6 @@ async function getAllPosts() {
     }
 }
 
-// Show 3 dinners on page load
-// Every time button is pressed - show 3 more dinners
-
-loadBtn.addEventListener("click", loadDinners)
-
-let posts = 0
-
-function loadDinners() {
-
-    for (let i = posts; i < posts + 3; i++) {
-        dinnerContainer.innerHTML +=
-            `
-            <div>
-                <a href="postDetails.html?id=${dinnerObject[i].id}">navigate</a>
-                <p>Food name: ${dinnerObject[i].title.rendered}</p>
-                <img src="${dinnerObject[i].jetpack_featured_media_url}"></img>
-            </div>
-            `
-    }
-    posts += 3
-    console.log(dinnerContainer)
-}
 getAllPosts()
 
 /* 
@@ -81,9 +47,13 @@ function generateCarousel(allPosts) {
             <div class="carouselSlideGroup">
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
+                    <a  style="display: none" href="postDetails.html?id=${allPosts[1].id}">
+                        <p>View description</p>
+                    </a>
                 </div>
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
+                    <a style="display: none" href="postDetails.html?id=${allPosts[2].id}"><p>View description</p></a>
                 </div>
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
