@@ -7,7 +7,7 @@ const params = new URLSearchParams(queryString)
 const id = params.get("id")
 
 // Adding the ID to the URL
-url = "http://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts/" + id
+url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts/" + id
 
 // Using the Dynamic URL to fetch data from spesific pokemon
 async function getOnePost() {

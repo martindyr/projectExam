@@ -1,5 +1,5 @@
 // API get request link
-const url = "http://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts?per_page=100"
+const url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts?per_page=100"
 
 // Tagerget place to generate HTML
 const dinnerContainer = document.querySelector(".dinnerContainer")
