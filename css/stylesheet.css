@@ -275,6 +275,26 @@ nav a:hover {
     margin: 0 auto;
 }
 
+.loadBtnContainer {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: end;
+}
+
+#loadDinnersBtn,
+#loadDessertsBtn {
+    background-color: wheat;
+    font-size: 18px;
+    color: #24292e;
+    border: 1px wheat solid;
+    padding: 10px;
+    border-radius: 10px;
+    width: 15%;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .postListImg {
     width: 100%;
 
