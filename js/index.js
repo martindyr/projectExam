@@ -48,25 +48,27 @@ function generateCarousel(allPosts) {
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
                         <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[1].slug}</p>
+                        <p class="carouselImgName">${allPosts[1].slug.replace(/-/g, ' ')}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[1].id}">View description</a>
                         <div>
-                            <p>Time: 30min</p>
-                            <p>Chicken</p>
+                            <p>30 min</p>
+                            <p>Dinner</p>
+                            <p>Fish</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
                         <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[2].slug}</p>
+                        <p class="carouselImgName">${allPosts[2].slug.replace(/-/g, ' ')}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[2].id}">View description</a>
                         <div>
-                            <p>Time: 30min</p>
+                            <p>40 min</p>
+                            <p>Dinner</p>
                             <p>Chicken</p>
                         </div>
                     </div>
@@ -74,13 +76,14 @@ function generateCarousel(allPosts) {
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
                         <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[3].slug}</p>
+                        <p class="carouselImgName">${allPosts[3].slug.replace(/-/g, ' ')}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[3].id}">View description</a>
                         <div>
-                            <p>Time: 30min</p>
-                            <p>Chicken</p>
+                            <p>15 min</p>
+                            <p>Dessert</p>
+                            <p>Fruits</p>
                         </div>
                     </div>
                 </div>
@@ -92,43 +95,46 @@ function generateCarousel(allPosts) {
             <div class="carouselCard">
             <div class="carouselImgContainer">
                 <img class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[4].slug}</p>
+                <p class="carouselImgName">${allPosts[4].slug.replace(/-/g, ' ')}</p>
             </div>
             <div class="carouselText">
                 <a href="postDetails.html?id=${allPosts[4].id}">View description</a>
                 <div>
-                    <p>Time: 30min</p>
-                    <p>Chicken</p>
+                    <p>35 min</p>
+                    <p>Dinner</p>
+                    <p>Tofu</p>
                 </div>
             </div>
         </div>
         <div class="carouselCard">
         <div class="carouselImgContainer">
             <img class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[5].slug}</p>
+            <p class="carouselImgName">${allPosts[5].slug.replace(/-/g, ' ')}</p>
         </div>
         <div class="carouselText">
             <a href="postDetails.html?id=${allPosts[5].id}">View description</a>
             <div>
-                <p>Time: 30min</p>
-                <p>Chicken</p>
+                <p>10 min</p>
+                <p>Appetizer</p>
+                <p>Greens</p>
             </div>
         </div>
     </div>
     <div class="carouselCard">
     <div class="carouselImgContainer">
         <img class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
-        <p class="carouselImgName">${allPosts[6].slug}</p>
+        <p class="carouselImgName">${allPosts[6].slug.replace(/-/g, ' ')}</p>
     </div>
     <div class="carouselText">
         <a href="postDetails.html?id=${allPosts[6].id}">View description</a>
         <div>
-            <p>Time: 30min</p>
-            <p>Chicken</p>
+            <p>30 min</p>
+            <p>Dinner</p>
+            <p>Fish</p>
         </div>
     </div>
 </div>
-            </div>
+</div>
         </div>
 
         <div class="carouselSlide">
@@ -136,44 +142,47 @@ function generateCarousel(allPosts) {
             <div class="carouselCard">
             <div class="carouselImgContainer">
                 <img class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[7].slug}</p>
+                <p class="carouselImgName">${allPosts[7].slug.replace(/-/g, ' ')}</p>
             </div>
             <div class="carouselText">
                 <a href="postDetails.html?id=${allPosts[7].id}">View description</a>
                 <div>
-                    <p>Time: 30min</p>
-                    <p>Chicken</p>
+                    <p>25 min</p>
+                    <p>Dinner</p>
+                    <p>Meet</p>
                 </div>
             </div>
         </div>
-        <div class="carouselCard">
+    <div class="carouselCard">
         <div class="carouselImgContainer">
             <img class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[8].slug}</p>
+            <p class="carouselImgName">${allPosts[8].slug.replace(/-/g, ' ')}</p>
         </div>
         <div class="carouselText">
             <a href="postDetails.html?id=${allPosts[8].id}">View description</a>
             <div>
-                <p>Time: 30min</p>
-                <p>Chicken</p>
+                <p>20min</p>
+                <p>Appetizer</p>
+                <p>Greens</p>
             </div>
         </div>
     </div>
     <div class="carouselCard">
-    <div class="carouselImgContainer">
-        <img class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
-        <p class="carouselImgName">${allPosts[9].slug}</p>
-    </div>
-    <div class="carouselText">
-        <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
-        <div>
-            <p>Time: 30min</p>
-            <p>Chicken</p>
+        <div class="carouselImgContainer">
+            <img class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
+            <p class="carouselImgName">${allPosts[9].slug.replace(/-/g, ' ')}</p>
+        </div>
+        <div class="carouselText">
+            <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
+            <div>
+                <p>10 min</p>
+                <p>Appetizer</p>
+                <p>Egg & Ham</p>
+            </div>
         </div>
     </div>
 </div>
-            </div>
-        </div>
+</div>
 
     </div>
     `

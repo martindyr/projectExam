@@ -53,16 +53,33 @@ async function getPosts() {
 loadDessertsBtn.addEventListener("click", loadDesserts)
 
 let desserts = 0
+let test = 0
 
 function loadDesserts() {
 
-    for (let i = desserts; i < desserts + 3; i++) {
-        dessertContainer.innerHTML +=
-            `
-            <div>
-                <img onclick="zoom(this)" class="postListImg" src="${dessertObject[i].jetpack_featured_media_url}"></img>
-            </div>
-            `
+    if (test === 0) {
+        dessertContainer.innerHTML = ``
+        test++
+    }
+    if (test >= 0) {
+        for (let i = desserts; i < desserts + 3; i++) {
+            dessertContainer.innerHTML +=
+                `
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="postListImg" src="${dessertObject[i].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${dessertObject[i].slug.replace(/-/g, ' ')}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${dessertObject[i].id}">View description</a>
+                        <div>
+                            <p>Time: 30min</p>
+                            <p>Chicken</p>
+                        </div>
+                    </div>
+                </div>
+                `
+        }
     }
 
     desserts += 3
@@ -84,8 +101,18 @@ function loadDinners() {
         } else {
             dinnerContainer.innerHTML +=
                 `
-            <div>
-                <img onclick="zoom(this)" class="postListImg" src="${dinnerObject[i].jetpack_featured_media_url}"></img>
+            <div class="carouselCard">
+                <div class="carouselImgContainer">
+                    <img onclick="zoom(this)" class="postListImg" src="${dinnerObject[i].jetpack_featured_media_url}" alt="">
+                    <p class="carouselImgName">${dinnerObject[i].slug.replace(/-/g, ' ')}</p>
+                </div>
+                <div class="carouselText">
+                    <a href="postDetails.html?id=${dinnerObject[i].id}">View description</a>
+                    <div>
+                        <p>Time: 30min</p>
+                        <p>Chicken</p>
+                    </div>
+                </div>
             </div>
             `
         }
@@ -98,11 +125,22 @@ function createHtml(posts) {
     for (let i = 0; i < posts.length; i++) {
 
         if (posts[i].categories[0] === 19) {
-            appetizerContainer.innerHTML += `
-        <div>
-            <img onclick="zoom(this)" class="postListImg" src="${posts[i].jetpack_featured_media_url}" alt="">
-        </div>
-        `
+            appetizerContainer.innerHTML +=
+                `
+            <div class="carouselCard">
+                <div class="carouselImgContainer">
+                    <img onclick="zoom(this)" class="postListImg" src="${posts[i].jetpack_featured_media_url}" alt="">
+                    <p class="carouselImgName">${posts[i].slug.replace(/-/g, ' ')}</p>
+                </div>
+                <div class="carouselText">
+                    <a href="postDetails.html?id=${posts[i].id}">View description</a>
+                    <div>
+                        <p>Time: 30min</p>
+                        <p>Chicken</p>
+                    </div>
+                </div>
+            </div>
+            `
         }
         /*         if (posts[i].categories[0] === 18) {
                     dessertContainer.innerHTML += `
