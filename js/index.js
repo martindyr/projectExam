@@ -47,16 +47,33 @@ function generateCarousel(allPosts) {
             <div class="carouselSlideGroup">
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
-                    <a  style="display: none" href="postDetails.html?id=${allPosts[1].id}">
-                        <p>View description</p>
-                    </a>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[1].id}">View description</a>
+                        <div>
+                            <p>Time: 30min</p>
+                            <p>Chicken</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
-                    <a style="display: none" href="postDetails.html?id=${allPosts[2].id}"><p>View description</p></a>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[2].id}">View description</a>
+                        <div>
+                            <p>Time: 30min</p>
+                            <p>Chicken</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carouselCard">
                     <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[3].id}">View description</a>
+                        <div>
+                            <p>Time: 30min</p>
+                            <p>Chicken</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

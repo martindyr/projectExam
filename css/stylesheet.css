@@ -101,7 +101,8 @@ nav a:hover {
 }
 
 .sectionHeaderContainer {
-    width: 100%;
+    margin: 0 auto;
+    width: 83%;
     height: auto;
 }
 
@@ -130,19 +131,18 @@ nav a:hover {
 .carousel {
     position: relative;
     width: 80%;
-    height: 700px;
+    height: 600px;
     margin: 0 auto;
-}
-
-.carouselImg {
-    width: 100%;
-    height: auto;
 }
 
 .carouselTrackContainer {
     position: relative;
     overflow: hidden;
     height: 100%;
+}
+
+.carouselTrack {
+    /* abra-cadabra */
 }
 
 .carouselSlide {
@@ -162,6 +162,49 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+.carouselCard {
+    padding: 4px 4px 4px 4px;
+}
+
+.carouselCard:hover {
+
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.carouselImg {
+    width: 500px;
+    height: auto;
+}
+
+.carouselText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2B3034;
+    height: 90px;
+
+}
+
+.carouselText a {
+    color: #fff;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.carouselText div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.carouselText div p {
+    color: #fff;
 
 }
 
@@ -182,19 +225,6 @@ nav a:hover {
     position: relative;
     left: 110%;
     top: -75%;
-}
-
-.carouselCard {
-    background-color: antiquewhite;
-    padding: 4px 4px 80px 4px;
-}
-
-.carouselCard:hover {
-
-    position: relative;
-    top: -5px;
-    cursor: pointer;
-    z-index: 999;
 }
 
 .carouselLoading {
@@ -232,7 +262,6 @@ nav a:hover {
     justify-content: space-between;
     gap: 80px;
     margin: 0 auto;
-    width: 80%;
 }
 
 .appetizerContainer,
@@ -240,19 +269,24 @@ nav a:hover {
 .dessertContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .postListImg {
-    width: 70%;
+    width: 100%;
+
 }
 
 /* CONTACT */
 
 form {
+
     padding: 20px;
     width: 30%;
-    margin: 0 auto;
+    margin: 60px auto;
     height: fit-content;
     border: 1px solid white;
     border-radius: 8px;
@@ -297,6 +331,46 @@ textarea {
     border: 1px solid white;
     border-radius: 4px;
 
+}
+
+/* ABOUT */
+
+.aboutContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px
+}
+
+.aboutImage {
+    height: auto;
+    width: 389px;
+}
+
+.aboutText {
+    margin-left: -40px;
+    width: 300px;
+    border: 2px wheat solid;
+    background-color: #24292e;
+}
+
+.aboutText h3 {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 40px;
+
+}
+
+.aboutText h3 {
+    color: wheat;
+
+}
+
+.aboutText p {
+    color: white;
+    padding: 10px 20px;
+    line-height: 130%;
 }
 
 /* LOADER */
