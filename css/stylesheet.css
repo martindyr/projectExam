@@ -45,6 +45,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    width: 80%;
 }
 
 nav {
@@ -176,9 +178,26 @@ nav a:hover {
     z-index: 999;
 }
 
+
 .carouselImg {
-    width: 500px;
+    width: 400px;
     height: auto;
+}
+
+.carouselImgContainer {
+    position: relative;
+}
+
+.carouselImgName {
+    padding: 8px;
+    text-transform: uppercase;
+    position: absolute;
+    width: fit-content;
+    font-size: 20px;
+    bottom: 70px;
+    right: 0px;
+    color: white;
+    background-color: rgba(36, 41, 46, 0.801);
 }
 
 .carouselText {
