@@ -33,7 +33,7 @@ function createHtml(details) {
     document.title = details.title.rendered
 
     detailsContainer.innerHTML = `
-<img src="" alt=""></img>
+<img src="${details.jetpack_featured_media_url}" alt=""></img>
     `
 
 }

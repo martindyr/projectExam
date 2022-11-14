@@ -1,6 +1,12 @@
 // Creating a component for the header
 // If changes ocour, i can edit everything in one place
 
+var numberArray = [
+    80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100
+];
+
+var randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
+
 // Target header
 const header = document.querySelector("header")
 
@@ -15,7 +21,7 @@ header.innerHTML = `
             <li><a id="browseRecepies" href="postList.html">Browse recepies</a></li>
             <li><a id="about" href="about.html">About</a></li>
             <li><a id="contact" href="contact.html">Contact</a></li>
-            <li><a href="">Suprise me</a></li>
+            <li><a href="postDetails.html?id=${randomNumber}">Suprise me</a></li>
         </ul>
     </div>
 
@@ -57,6 +63,8 @@ function currentHeader() {
         browseRecepiesBtn.style.fontSize = "21px";
     }
 }
+
+
 
 // Run the function when the page loads
 window.onload = currentHeader()
