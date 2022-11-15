@@ -26,9 +26,38 @@ header.innerHTML = `
     </div>
 
     <div id="phoneMenu">
-        <div></div>
-        <img src="/images/dinner.svg" alt=""></img>
-        <div></div>
+        <div>
+            <a href="postList.html">
+                <img src="/images/phoneBrowse.png" alt=""></img>
+                <p>Browse</p>
+            </a>
+        </div>
+        <div>
+            <a href="postDetails.html?id=${randomNumber}">
+                <img src="/images/phoneSuprise.svg" alt=""></img>
+                <p>Suprise</p>
+            </a>
+        </div>
+        <div>
+            <a href="index.html">
+                <img src="/images/phoneHome.png" alt=""></img>
+                <p>Home</p>
+            </a>
+        </div>
+        <div>
+            <a href="contact.html">
+                <img src="/images/phoneContact.svg" alt=""></img>
+                <p>Contact</p>
+            </a>
+        </div>
+        <div>
+            <a href="about.html">
+                <img src="/images/phoneAbout.svg" alt=""></img>
+                <p>About</p>
+            </a>
+        </div>
+
+
     </div>
 
 </nav>
