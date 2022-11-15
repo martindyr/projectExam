@@ -331,7 +331,10 @@ ul a:hover {
 /* POST DETAILS */
 
 .postDetailsContainer h3 {
+    font-size: 25px;
     text-transform: uppercase;
+    font-weight: 10;
+    color: wheat;
 }
 
 .detailsMethod {
@@ -349,7 +352,7 @@ ul a:hover {
 }
 
 #ingredientList {
-    color: wheat;
+    color: #fff;
     line-height: 50px;
 }
 
