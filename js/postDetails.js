@@ -47,8 +47,11 @@ function createHtml(details) {
             </div>
         </div>
 
-        <div id="recepieDescription">${details.content.rendered}</div>
+        <div class="detailsMethod">
+            <h3>Method</h3>
+        </div>
 
+        <div id="recepieDescription">${details.content.rendered}</div>
     `
 
 }

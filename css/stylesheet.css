@@ -330,6 +330,15 @@ ul a:hover {
 
 /* POST DETAILS */
 
+.postDetailsContainer h3 {
+    text-transform: uppercase;
+}
+
+.detailsMethod {
+    padding-top: 50px;
+    text-align: center;
+}
+
 .detailsHeader {
     display: flex;
     justify-content: center;
