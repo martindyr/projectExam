@@ -211,13 +211,13 @@ nav a:hover {
     justify-content: space-between;
     background-color: #2B3034;
     height: 90px;
-
 }
 
 .carouselText a {
     color: #fff;
     padding-top: 10px;
     padding-left: 15px;
+    text-decoration: underline;
 }
 
 .carouselText div {
@@ -497,7 +497,8 @@ textarea:focus-visible {
     #phoneMenu {
         display: flex;
         justify-content: space-between;
-        height: 90px;
+        align-items: center;
+        height: 80px;
         background-color: #242327;
         width: 100%;
         position: fixed;
@@ -517,6 +518,10 @@ textarea:focus-visible {
 
     #phoneMenu img {
         padding-bottom: 10px;
+        width: 70%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     #phoneMenu p {

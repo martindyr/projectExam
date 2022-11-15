@@ -73,7 +73,7 @@ function loadDesserts() {
                     <div class="carouselText">
                         <a href="postDetails.html?id=${dessertObject[i].id}">View description</a>
                         <div>
-                            <p>Time: 30min</p>
+                            <p>30min</p>
                             <p>Chicken</p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ function loadDinners() {
                 <div class="carouselText">
                     <a href="postDetails.html?id=${dinnerObject[i].id}">View description</a>
                     <div>
-                        <p>Time: 30min</p>
+                        <p>30min</p>
                         <p>Chicken</p>
                     </div>
                 </div>
@@ -135,7 +135,7 @@ function createHtml(posts) {
                 <div class="carouselText">
                     <a href="postDetails.html?id=${posts[i].id}">View description</a>
                     <div>
-                        <p>Time: 30min</p>
+                        <p>30min</p>
                         <p>Chicken</p>
                     </div>
                 </div>
