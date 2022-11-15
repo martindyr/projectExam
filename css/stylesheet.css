@@ -91,7 +91,7 @@ nav ul li a {
     font-family: 'Abel', sans-serif;
 }
 
-nav a:hover {
+ul a:hover {
     font-size: 21px;
     opacity: 1;
 }
