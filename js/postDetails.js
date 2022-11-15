@@ -33,7 +33,22 @@ function createHtml(details) {
     document.title = details.title.rendered
 
     detailsContainer.innerHTML = `
-<img src="${details.jetpack_featured_media_url}" alt=""></img>
+        <div class="sectionHeaderContainer">
+            <div>
+                <h2>${details.title.rendered}</h2>
+            </div>
+        </div>
+
+        <div class="detailsHeader">
+            <img src="${details.jetpack_featured_media_url}" alt=""></img>
+            <div>
+                <h3>Ingredients</h3>
+                <div id="ingredientList">${details.excerpt.rendered}</div>
+            </div>
+        </div>
+
+        <div id="recepieDescription">${details.content.rendered}</div>
+
     `
 
 }

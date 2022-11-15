@@ -25,17 +25,6 @@ async function getAllPosts() {
 
 getAllPosts()
 
-/* 
-const shadowContainer = document.querySelector("#shadowContainer")
-
-function zoom() {
-    shadowContainer.style.display = "block"
-
-}
-
-function removeZoom() {
-    shadowContainer.style.display = "none"
-} */
 
 // CAROUSEL
 const carousel = document.querySelector(".carouselTrackContainer")
@@ -47,43 +36,43 @@ function generateCarousel(allPosts) {
             <div class="carouselSlideGroup">
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[1].slug.replace(/-/g, ' ')}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[1].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[1].title.rendered}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[1].id}">View description</a>
                         <div>
                             <p>30 min</p>
                             <p>Dinner</p>
-                            <p>Fish</p>
+                            <p>${allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[2].slug.replace(/-/g, ' ')}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[2].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[2].title.rendered}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[2].id}">View description</a>
                         <div>
                             <p>40 min</p>
                             <p>Dinner</p>
-                            <p>Chicken</p>
+                            <p>${allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[3].slug.replace(/-/g, ' ')}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[3].title.rendered}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${allPosts[3].id}">View description</a>
                         <div>
                             <p>15 min</p>
                             <p>Dessert</p>
-                            <p>Fruits</p>
+                            <p>${allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -94,43 +83,43 @@ function generateCarousel(allPosts) {
             <div class="carouselSlideGroup">
             <div class="carouselCard">
             <div class="carouselImgContainer">
-                <img class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[4].slug.replace(/-/g, ' ')}</p>
+                <img onclick="zoom(this)" class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
+                <p class="carouselImgName">${allPosts[4].title.rendered}</p>
             </div>
             <div class="carouselText">
                 <a href="postDetails.html?id=${allPosts[4].id}">View description</a>
                 <div>
                     <p>35 min</p>
                     <p>Dinner</p>
-                    <p>Tofu</p>
+                    <p>${allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                 </div>
             </div>
         </div>
         <div class="carouselCard">
         <div class="carouselImgContainer">
-            <img class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[5].slug.replace(/-/g, ' ')}</p>
+            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
+            <p class="carouselImgName">${allPosts[5].title.rendered}</p>
         </div>
         <div class="carouselText">
             <a href="postDetails.html?id=${allPosts[5].id}">View description</a>
             <div>
                 <p>10 min</p>
                 <p>Appetizer</p>
-                <p>Greens</p>
+                <p>${allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
             </div>
         </div>
     </div>
     <div class="carouselCard">
     <div class="carouselImgContainer">
-        <img class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
-        <p class="carouselImgName">${allPosts[6].slug.replace(/-/g, ' ')}</p>
+        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
+        <p class="carouselImgName">${allPosts[6].title.rendered}</p>
     </div>
     <div class="carouselText">
         <a href="postDetails.html?id=${allPosts[6].id}">View description</a>
         <div>
             <p>30 min</p>
             <p>Dinner</p>
-            <p>Fish</p>
+            <p>${allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
         </div>
     </div>
 </div>
@@ -141,43 +130,43 @@ function generateCarousel(allPosts) {
             <div class="carouselSlideGroup">
             <div class="carouselCard">
             <div class="carouselImgContainer">
-                <img class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[7].slug.replace(/-/g, ' ')}</p>
+                <img onclick="zoom(this)" class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
+                <p class="carouselImgName">${allPosts[7].title.rendered}</p>
             </div>
             <div class="carouselText">
                 <a href="postDetails.html?id=${allPosts[7].id}">View description</a>
                 <div>
                     <p>25 min</p>
                     <p>Dinner</p>
-                    <p>Meet</p>
+                    <p>${allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                 </div>
             </div>
         </div>
     <div class="carouselCard">
         <div class="carouselImgContainer">
-            <img class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[8].slug.replace(/-/g, ' ')}</p>
+            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
+            <p class="carouselImgName">${allPosts[8].title.rendered}</p>
         </div>
         <div class="carouselText">
             <a href="postDetails.html?id=${allPosts[8].id}">View description</a>
             <div>
                 <p>20min</p>
                 <p>Appetizer</p>
-                <p>Greens</p>
+                <p>${allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
             </div>
         </div>
     </div>
     <div class="carouselCard">
         <div class="carouselImgContainer">
-            <img class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[9].slug.replace(/-/g, ' ')}</p>
+            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
+            <p class="carouselImgName">${allPosts[9].title.rendered}</p>
         </div>
         <div class="carouselText">
             <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
             <div>
                 <p>10 min</p>
                 <p>Appetizer</p>
-                <p>Egg & Ham</p>
+                <p>${allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
             </div>
         </div>
     </div>
@@ -252,6 +241,36 @@ function generateCarousel(allPosts) {
     })
 }
 
+function zoom(img) {
+    // Start zooming
+    const src = img.src;
+    const zoomedContainer = document.querySelector(".zoomedContainer")
+    zoomedContainer.innerHTML = `
+        <div onclick="quitZoom()" class="zoomedImgBackground">
+            <img class="zoomedImg" src="${src}" alt=""></img>
+        </div>
+        `
+    // Remove scroll
+    const body = document.querySelector("body")
+    body.style.overflow = "hidden"
+    // Hide posts
+    const posts = document.querySelector(".carousel")
+    posts.style.display = "none"
+
+
+}
+
+function quitZoom() {
+    // Quit zooming
+    const zoomedContainer = document.querySelector(".zoomedContainer")
+    zoomedContainer.innerHTML = ``
+    // Enable scroll
+    const body = document.querySelector("body")
+    body.style.overflow = ""
+    // Show posts
+    const posts = document.querySelector(".carousel")
+    posts.style.display = ""
+}
 
 
 

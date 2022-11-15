@@ -9,7 +9,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-img {
+.carousel img,
+.postListContent img,
+.detailsHeader img {
     object-fit: cover;
     object-position: 1px -1px;
 }
@@ -173,6 +175,7 @@ ul a:hover {
 
 .carouselCard {
     padding: 4px 4px 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .carouselCard:hover {
@@ -195,7 +198,6 @@ ul a:hover {
 
 .carouselImgName {
     padding: 8px;
-    text-transform: uppercase;
     position: absolute;
     width: fit-content;
     font-size: 20px;
@@ -203,6 +205,8 @@ ul a:hover {
     right: 0px;
     color: white;
     background-color: rgba(36, 41, 46, 0.801);
+    text-transform: uppercase;
+
 }
 
 .carouselText {
@@ -322,7 +326,30 @@ ul a:hover {
 
 .postListImg {
     width: 100%;
+}
 
+/* POST DETAILS */
+
+.detailsHeader {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#ingredientList {
+    color: wheat;
+    line-height: 50px;
+}
+
+#recepieDescription {
+    padding-top: 50px;
+    width: 37%;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 40px;
 }
 
 /* CONTACT */
@@ -351,6 +378,7 @@ ul a:hover {
 .contactImgContainer img {
     width: 100%;
     height: auto;
+    min-width: 170px;
 
 }
 
@@ -363,6 +391,7 @@ form {
 
     padding: 20px;
     width: 100%;
+    min-width: 210px;
     height: fit-content;
     border-radius: 8px;
     display: flex;
@@ -400,9 +429,9 @@ textarea {
     margin-top: 7px;
     max-width: 99.5%;
     min-width: 99.5%;
-    max-height: 100px;
-    height: 60px;
-    min-height: 20px;
+    max-height: 160px;
+    height: 100px;
+    min-height: 30px;
     background-color: #24292e;
     border: 1px solid wheat;
     border-radius: 4px;
@@ -506,14 +535,14 @@ textarea:focus-visible {
         z-index: 50;
     }
 
-    #phoneMenu div {
+    #phoneMenu a {
         height: 100%;
         width: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding: 0px 5px 5px 5px;
+        padding: 0px 5px 10px 5px;
     }
 
     #phoneMenu img {

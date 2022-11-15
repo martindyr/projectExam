@@ -68,13 +68,13 @@ function loadDesserts() {
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
                         <img onclick="zoom(this)" class="postListImg" src="${dessertObject[i].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${dessertObject[i].slug.replace(/-/g, ' ')}</p>
+                        <p class="carouselImgName">${dessertObject[i].title.rendered}</p>
                     </div>
                     <div class="carouselText">
                         <a href="postDetails.html?id=${dessertObject[i].id}">View description</a>
                         <div>
                             <p>30min</p>
-                            <p>Chicken</p>
+                            <p>${dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -104,13 +104,13 @@ function loadDinners() {
             <div class="carouselCard">
                 <div class="carouselImgContainer">
                     <img onclick="zoom(this)" class="postListImg" src="${dinnerObject[i].jetpack_featured_media_url}" alt="">
-                    <p class="carouselImgName">${dinnerObject[i].slug.replace(/-/g, ' ')}</p>
+                    <p class="carouselImgName">${dinnerObject[i].title.rendered}</p>
                 </div>
                 <div class="carouselText">
                     <a href="postDetails.html?id=${dinnerObject[i].id}">View description</a>
                     <div>
                         <p>30min</p>
-                        <p>Chicken</p>
+                        <p>${dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                     </div>
                 </div>
             </div>
@@ -130,13 +130,13 @@ function createHtml(posts) {
             <div class="carouselCard">
                 <div class="carouselImgContainer">
                     <img onclick="zoom(this)" class="postListImg" src="${posts[i].jetpack_featured_media_url}" alt="">
-                    <p class="carouselImgName">${posts[i].slug.replace(/-/g, ' ')}</p>
+                    <p class="carouselImgName">${posts[i].title.rendered}</p>
                 </div>
                 <div class="carouselText">
                     <a href="postDetails.html?id=${posts[i].id}">View description</a>
                     <div>
                         <p>30min</p>
-                        <p>Chicken</p>
+                        <p>${posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                     </div>
                 </div>
             </div>
@@ -182,8 +182,6 @@ function quitZoom() {
     // Show posts
     const posts = document.querySelector(".postListContent")
     posts.style.display = ""
-
-
 }
 
 getPosts()
