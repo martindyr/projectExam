@@ -39,7 +39,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[1].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[1].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[1].id}">View recepie</a>
                         <div>
                             <p>30 min</p>
                             <p>Dinner</p>
@@ -53,7 +53,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[2].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[2].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[2].id}">View recepie</a>
                         <div>
                             <p>40 min</p>
                             <p>Dinner</p>
@@ -67,7 +67,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[3].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[3].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[3].id}">View recepie</a>
                         <div>
                             <p>15 min</p>
                             <p>Dessert</p>
@@ -86,7 +86,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[4].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[4].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[4].id}">View recepie</a>
                         <div>
                             <p>35 min</p>
                             <p>Dinner</p>
@@ -100,7 +100,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[5].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[5].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[5].id}">View recepie</a>
                         <div>
                             <p>10 min</p>
                             <p>Appetizer</p>
@@ -114,7 +114,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[6].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[6].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[6].id}">View recepie</a>
                         <div>
                             <p>30 min</p>
                             <p>Dinner</p>
@@ -133,7 +133,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[7].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[7].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[7].id}">View recepie</a>
                         <div>
                             <p>25 min</p>
                             <p>Dinner</p>
@@ -147,7 +147,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[8].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[8].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[8].id}">View recepie</a>
                         <div>
                             <p>20min</p>
                             <p>Appetizer</p>
@@ -161,7 +161,7 @@ function generateCarousel(allPosts) {
                         <p class="carouselImgName">${allPosts[9].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
+                        <a href="postDetails.html?id=${allPosts[9].id}">View recepie</a>
                         <div>
                             <p>10 min</p>
                             <p>Appetizer</p>

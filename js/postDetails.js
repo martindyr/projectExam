@@ -40,7 +40,7 @@ function createHtml(details) {
         </div>
 
         <div class="detailsHeader">
-            <img src="${details.jetpack_featured_media_url}" alt=""></img>
+            <img onclick="zoom(this)" src="${details.jetpack_featured_media_url}" alt=""></img>
             <div>
                 <h3>Ingredients</h3>
                 <div id="ingredientList">
@@ -65,7 +65,7 @@ function createHtml(details) {
         </div>
 
         <div id="recepieDescription">
-            <p>If this was not a dummy text, it would be a step-by-step on how to create the dish above. This text is also requested from WP. The description would be something like this:</p>
+            <p>If this was not a dummy text, it would be a step-by-step on how to create the dish above. In WP this would be the content of the post. The content would be something like this:</p>
 
             <p>1 Fres finhakket løk, hvitløk, og chili, sammen med hakket rød og gul paprika i en gryte på middels varme. Tilsett tomatpuré og la det frese et par minutter.</p>
 
@@ -79,4 +79,35 @@ function createHtml(details) {
         </div>
     `
 
+}
+
+function zoom(img) {
+    // Start zooming
+    const src = img.src;
+    const zoomedContainer = document.querySelector(".zoomedContainer")
+    zoomedContainer.innerHTML = `
+        <div onclick="quitZoom()" class="zoomedImgBackground">
+            <img class="zoomedImg" src="${src}" alt=""></img>
+        </div>
+        `
+    // Remove scroll
+    const body = document.querySelector("body")
+    body.style.overflow = "hidden"
+    // Hide posts
+    const posts = document.querySelector(".carousel")
+    posts.style.display = "none"
+
+
+}
+
+function quitZoom() {
+    // Quit zooming
+    const zoomedContainer = document.querySelector(".zoomedContainer")
+    zoomedContainer.innerHTML = ``
+    // Enable scroll
+    const body = document.querySelector("body")
+    body.style.overflow = ""
+    // Show posts
+    const posts = document.querySelector(".carousel")
+    posts.style.display = ""
 }
