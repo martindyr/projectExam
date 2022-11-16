@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    min-height: calc(100vh - 217px);
+    min-height: calc(100vh - 350px);
 }
 
 
@@ -160,7 +160,6 @@ ul a:hover {
 .carouselSlideGroup {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
 }
 
 .carouselCard {
@@ -206,6 +205,8 @@ ul a:hover {
 }
 
 .carouselText a {
+    font-size: 20px;
+
     color: #fff;
     padding-top: 10px;
     padding-left: 15px;
@@ -221,6 +222,7 @@ ul a:hover {
 
 .carouselText div p {
     color: #fff;
+    font-size: 20px;
 
 }
 
@@ -233,14 +235,16 @@ ul a:hover {
 
 .carouselButtonLeft {
     position: relative;
-    left: -10%;
-    top: 35%;
+    left: -8%;
+    top: 40%;
+    transform: translate(-50%, 50%);
 }
 
 .carouselButtonRight {
     position: relative;
-    left: 110%;
-    top: -75%;
+    left: 107%;
+    top: -60%;
+    transform: translate(50%, -50%);
 }
 
 .carouselLoading {
@@ -364,11 +368,47 @@ ul a:hover {
     flex-direction: column;
     gap: 20px;
     padding: 35px 0px;
-    width: 45%;
+    width: fit-content;
     margin: 0 auto;
     color: #fff;
     line-height: 35px;
 }
+
+.detailsHeaderLoading {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.detailsImgLoading {
+    background-color: #2B3034;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+    width: 60%;
+    height: 600px;
+}
+
+.detailsIngredientsLoading {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 20%;
+}
+
+.detailsIngredientLoading {
+    background-color: #2B3034;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+    width: 100%;
+    height: 16px;
+}
+
+
 
 /* CONTACT */
 
@@ -545,42 +585,43 @@ textarea:focus-visible {
         display: none;
     }
 
-    #phoneMenu {
+    #phoneMenuContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 80px;
-        border-top: wheat solid 0.2px;
+        border-top: rgba(245, 222, 179, 0.199) solid 1px;
         background-color: #242327;
         width: 100%;
         position: fixed;
         bottom: 0;
-        z-index: 50;
+        z-index: 9999999999999999;
     }
 
-    #phoneMenu a {
+
+    #phoneMenuContainer a {
         height: 100%;
-        width: auto;
+        width: 97%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
-        padding: 0px 5px 10px 5px;
+        padding-bottom: 4px;
     }
 
-    #phoneMenu img {
-        padding-bottom: 10px;
-        width: 70%;
+    #phoneMenuContainer img {
         align-items: center;
         display: flex;
         justify-content: center;
+        width: 50px;
+        height: auto;
     }
 
-    #phoneMenu p {
+    #phoneMenuContainer p {
         color: wheat;
         text-transform: uppercase;
-        padding-bottom: 8px;
         font-size: 14px;
+        text-align: center;
     }
 
 

@@ -1,8 +1,10 @@
 // Creating a component for the header
 // If changes ocour, i can edit everything in one place
+console.log()
+
 
 var numberArray = [
-    80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100
+    50, 21, 19, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98,
 ];
 
 var randomNumber = numberArray[Math.floor(Math.random() * numberArray.length)];
@@ -25,39 +27,27 @@ header.innerHTML = `
         </ul>
     </div>
 
-    <div id="phoneMenu">
-        <div>
+    <div id="phoneMenuContainer">
             <a href="postList.html">
-                <img src="/images/phoneBrowse.png" alt=""></img>
+                <img src="/images/browse.png" alt=""></img>
                 <p>Browse</p>
             </a>
-        </div>
-        <div>
             <a href="postDetails.html?id=${randomNumber}">
-                <img src="/images/phoneSuprise.svg" alt=""></img>
+                <img src="/images/suprise.png" alt=""></img>
                 <p>Suprise</p>
             </a>
-        </div>
-        <div>
             <a href="index.html">
-                <img src="/images/phoneHome.png" alt=""></img>
+                <img src="/images/home.png" alt=""></img>
                 <p>Home</p>
             </a>
-        </div>
-        <div>
             <a href="contact.html">
-                <img src="/images/phoneContact.svg" alt=""></img>
+                <img src="/images/contact.png" alt=""></img>
                 <p>Contact</p>
             </a>
-        </div>
-        <div>
             <a href="about.html">
-                <img src="/images/phoneAbout.svg" alt=""></img>
+                <img src="/images/about.png" alt=""></img>
                 <p>About</p>
             </a>
-        </div>
-
-
     </div>
 
 </nav>

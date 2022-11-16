@@ -181,6 +181,7 @@ function generateCarousel(allPosts) {
     const track = document.querySelector(".carouselTrack")
     const slides = Array.from(track.children)
     const slideWidth = slides[0].getBoundingClientRect().width
+    let slideIndex = 1
 
     // When carousel is loaded - disable prev-button
     prevBtn.style.opacity = 0.3
@@ -207,12 +208,17 @@ function generateCarousel(allPosts) {
         prevBtnImg.style.cursor = 'pointer'
 
         // Disable next-button at last slide
-        if (nextSlide.style.left === 1680 + 'px') {
-            console.log("This is the last slide")
+        if (slideIndex === 3) {
+            return
+        } else {
+            slideIndex++
+            console.log("This is slide number: " + slideIndex)
+        }
+
+        if (slideIndex === 3) {
             nextBtn.style.opacity = 0.3
             nextBtnImg.style.opacity = 0.3
             nextBtnImg.style.cursor = 'default'
-
         }
     })
     // Previous slide
@@ -229,15 +235,25 @@ function generateCarousel(allPosts) {
         nextBtnImg.style.opacity = 1
         nextBtnImg.style.cursor = 'pointer'
 
-        // Disable prev-button at first slide
-        if (prevSlide.style.left === slideWidth * 0 + 'px') {
-            console.log("This is the first slide")
+
+        // Disable Prev-button at first slide
+        if (slideIndex === 1) {
+            return
+        } else {
+            slideIndex--
+            console.log("This is slide number: " + slideIndex)
+        }
+
+        if (slideIndex === 1) {
             prevBtn.style.opacity = 0.3
             prevBtnImg.style.opacity = 0.3
             prevBtnImg.style.cursor = 'default'
         }
     })
 }
+
+
+
 
 function zoom(img) {
     // Start zooming
