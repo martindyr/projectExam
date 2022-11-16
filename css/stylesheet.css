@@ -179,7 +179,6 @@ ul a:hover {
 }
 
 .carouselCard:hover {
-
     position: relative;
     top: -5px;
     cursor: pointer;
@@ -206,7 +205,6 @@ ul a:hover {
     color: white;
     background-color: rgba(36, 41, 46, 0.801);
     text-transform: uppercase;
-
 }
 
 .carouselText {
@@ -326,6 +324,17 @@ ul a:hover {
 
 .postListImg {
     width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .appetizerContainer,
+    .dinnerContainer,
+    .dessertContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
 }
 
 /* POST DETAILS */
