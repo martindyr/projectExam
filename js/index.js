@@ -31,7 +31,6 @@ const carousel = document.querySelector(".carouselTrackContainer")
 function generateCarousel(allPosts) {
     carousel.innerHTML = `
     <div class="carouselTrack">
- 
         <div class="carouselSlide currentSlide">
             <div class="carouselSlideGroup">
                 <div class="carouselCard">
@@ -44,7 +43,7 @@ function generateCarousel(allPosts) {
                         <div>
                             <p>30 min</p>
                             <p>Dinner</p>
-                            <p>${allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[1].slug.charAt().toUpperCase() + allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +57,7 @@ function generateCarousel(allPosts) {
                         <div>
                             <p>40 min</p>
                             <p>Dinner</p>
-                            <p>${allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[2].slug.charAt().toUpperCase() + allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,7 @@ function generateCarousel(allPosts) {
                         <div>
                             <p>15 min</p>
                             <p>Dessert</p>
-                            <p>${allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[3].slug.charAt().toUpperCase() + allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -81,98 +80,97 @@ function generateCarousel(allPosts) {
 
         <div class="carouselSlide">
             <div class="carouselSlideGroup">
-            <div class="carouselCard">
-            <div class="carouselImgContainer">
-                <img onclick="zoom(this)" class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[4].title.rendered}</p>
-            </div>
-            <div class="carouselText">
-                <a href="postDetails.html?id=${allPosts[4].id}">View description</a>
-                <div>
-                    <p>35 min</p>
-                    <p>Dinner</p>
-                    <p>${allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[4].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[4].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[4].id}">View description</a>
+                        <div>
+                            <p>35 min</p>
+                            <p>Dinner</p>
+                            <p>${allPosts[4].slug.charAt().toUpperCase() + allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[5].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[5].id}">View description</a>
+                        <div>
+                            <p>10 min</p>
+                            <p>Appetizer</p>
+                            <p>${allPosts[5].slug.charAt().toUpperCase() + allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[6].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[6].id}">View description</a>
+                        <div>
+                            <p>30 min</p>
+                            <p>Dinner</p>
+                            <p>${allPosts[6].slug.charAt().toUpperCase() + allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="carouselCard">
-        <div class="carouselImgContainer">
-            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[5].title.rendered}</p>
-        </div>
-        <div class="carouselText">
-            <a href="postDetails.html?id=${allPosts[5].id}">View description</a>
-            <div>
-                <p>10 min</p>
-                <p>Appetizer</p>
-                <p>${allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
-            </div>
-        </div>
-    </div>
-    <div class="carouselCard">
-    <div class="carouselImgContainer">
-        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[6].jetpack_featured_media_url}" alt="">
-        <p class="carouselImgName">${allPosts[6].title.rendered}</p>
-    </div>
-    <div class="carouselText">
-        <a href="postDetails.html?id=${allPosts[6].id}">View description</a>
-        <div>
-            <p>30 min</p>
-            <p>Dinner</p>
-            <p>${allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
-        </div>
-    </div>
-</div>
-</div>
         </div>
 
         <div class="carouselSlide">
             <div class="carouselSlideGroup">
-            <div class="carouselCard">
-            <div class="carouselImgContainer">
-                <img onclick="zoom(this)" class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
-                <p class="carouselImgName">${allPosts[7].title.rendered}</p>
-            </div>
-            <div class="carouselText">
-                <a href="postDetails.html?id=${allPosts[7].id}">View description</a>
-                <div>
-                    <p>25 min</p>
-                    <p>Dinner</p>
-                    <p>${allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[7].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[7].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[7].id}">View description</a>
+                        <div>
+                            <p>25 min</p>
+                            <p>Dinner</p>
+                            <p>${allPosts[7].slug.charAt().toUpperCase() + allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[8].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[8].id}">View description</a>
+                        <div>
+                            <p>20min</p>
+                            <p>Appetizer</p>
+                            <p>${allPosts[8].slug.charAt().toUpperCase() + allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carouselCard">
+                    <div class="carouselImgContainer">
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[9].title.rendered}</p>
+                    </div>
+                    <div class="carouselText">
+                        <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
+                        <div>
+                            <p>10 min</p>
+                            <p>Appetizer</p>
+                            <p>${allPosts[9].slug.charAt().toUpperCase() + allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    <div class="carouselCard">
-        <div class="carouselImgContainer">
-            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[8].title.rendered}</p>
-        </div>
-        <div class="carouselText">
-            <a href="postDetails.html?id=${allPosts[8].id}">View description</a>
-            <div>
-                <p>20min</p>
-                <p>Appetizer</p>
-                <p>${allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
-            </div>
-        </div>
-    </div>
-    <div class="carouselCard">
-        <div class="carouselImgContainer">
-            <img onclick="zoom(this)" class="carouselImg" src="${allPosts[9].jetpack_featured_media_url}" alt="">
-            <p class="carouselImgName">${allPosts[9].title.rendered}</p>
-        </div>
-        <div class="carouselText">
-            <a href="postDetails.html?id=${allPosts[9].id}">View description</a>
-            <div>
-                <p>10 min</p>
-                <p>Appetizer</p>
-                <p>${allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
     </div>
     `
     // Select html used to interact with carousel
