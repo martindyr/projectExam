@@ -38,7 +38,7 @@ async function getPosts() {
             }
         }
         console.log(dinnerObject)
-        createHtml(posts)
+        createAppetizers(posts)
         loadDinners()
         loadDesserts()
     } catch {
@@ -53,15 +53,18 @@ async function getPosts() {
 loadDessertsBtn.addEventListener("click", loadDesserts)
 
 let desserts = 0
-let test = 0
+let loadingDesserts = 0
 
 function loadDesserts() {
 
-    if (test === 0) {
+    // On the first run, clear content and generate desserts
+    if (loadingDesserts === 0) {
         dessertContainer.innerHTML = ``
-        test++
+        loadingDesserts++
     }
-    if (test >= 0) {
+
+    if (loadingDesserts >= 0) {
+
         for (let i = desserts; i < desserts + 3; i++) {
             dessertContainer.innerHTML +=
                 `
@@ -73,14 +76,15 @@ function loadDesserts() {
                     <div class="carouselText">
                         <a href="postDetails.html?id=${dessertObject[i].id}">View description</a>
                         <div>
-                            <p>30min</p>
-                            <p>${dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            ${dessertObject[i].excerpt.rendered}
+                            <p>${dessertObject[i].slug.charAt().toUpperCase() + dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 `
         }
     }
+
 
     desserts += 3
 
@@ -92,15 +96,22 @@ function loadDesserts() {
 loadDinnersBtn.addEventListener("click", loadDinners)
 
 let dinners = 0
+let loadingDinners = 0
 
 function loadDinners() {
+    if (loadingDinners === 0) {
+        dinnerContainer.innerHTML = ``
+        loadingDinners++
+    }
 
-    for (let i = dinners; i < dinners + 3; i++) {
-        if (dinnerObject[i] >= 10) {
-            return
-        } else {
-            dinnerContainer.innerHTML +=
-                `
+    if (loadingDinners >= 0) {
+
+        for (let i = dinners; i < dinners + 3; i++) {
+            if (dinnerObject[i] >= 10) {
+                return
+            } else {
+                dinnerContainer.innerHTML +=
+                    `
             <div class="carouselCard">
                 <div class="carouselImgContainer">
                     <img onclick="zoom(this)" class="postListImg" src="${dinnerObject[i].jetpack_featured_media_url}" alt="">
@@ -109,21 +120,24 @@ function loadDinners() {
                 <div class="carouselText">
                     <a href="postDetails.html?id=${dinnerObject[i].id}">View description</a>
                     <div>
-                        <p>30min</p>
-                        <p>${dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        ${dinnerObject[i].excerpt.rendered}
+                        <p>${dinnerObject[i].slug.charAt().toUpperCase() + dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                     </div>
                 </div>
             </div>
             `
+            }
         }
     }
     dinners += 3
 }
 
-// Generating the posts from Wordpress API
-function createHtml(posts) {
-    for (let i = 0; i < posts.length; i++) {
+// Generating Appetizers from Wordpress API
+function createAppetizers(posts) {
+    // Clearing loader
+    appetizerContainer.innerHTML = ``
 
+    for (let i = 0; i < posts.length; i++) {
         if (posts[i].categories[0] === 19) {
             appetizerContainer.innerHTML +=
                 `
@@ -135,20 +149,13 @@ function createHtml(posts) {
                 <div class="carouselText">
                     <a href="postDetails.html?id=${posts[i].id}">View description</a>
                     <div>
-                        <p>30min</p>
-                        <p>${posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').charAt().toUpperCase() + posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                        ${posts[i].excerpt.rendered}
+                        <p>${posts[i].slug.charAt().toUpperCase() + posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                     </div>
                 </div>
             </div>
             `
         }
-        /*         if (posts[i].categories[0] === 18) {
-                    dessertContainer.innerHTML += `
-                <div>
-                    <img onclick="zoom(this)" class="postListImg" src="${posts[i].jetpack_featured_media_url}" alt="">
-                </div>
-                `
-                } */
     }
 
 }

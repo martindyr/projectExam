@@ -30,7 +30,7 @@ getOnePost()
 function createHtml(details) {
 
     // Changning the document title to the post name
-    document.title = details.title.rendered
+    document.title = details.title.rendered.replace(/&/g, '').replace(/#/g, '').replace(/[0-9]/g, '')
 
     detailsContainer.innerHTML = `
         <div class="sectionHeaderContainer">
