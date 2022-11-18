@@ -183,7 +183,7 @@ function zoom(img) {
     body.style.overflow = "hidden"
     // Hide posts
     const posts = document.querySelector(".postListContent")
-    posts.style.display = "none"
+    posts.style.display = ""
 }
 
 function quitZoom() {

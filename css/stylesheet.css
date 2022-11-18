@@ -10,7 +10,8 @@
 
 .carousel img,
 .postListContent img,
-.detailsHeader img {
+.detailsHeader img,
+.zoomedImg {
     object-fit: cover;
     object-position: 1px -1px;
 }
@@ -171,7 +172,7 @@ ul a:hover {
     position: relative;
     top: -5px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 2;
 }
 
 
@@ -414,7 +415,8 @@ ul a:hover {
 
 .contactContainer {
     padding-top: 50px;
-    width: 60%;
+    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -632,12 +634,11 @@ textarea:focus-visible {
 .zoomedImg {
     height: 70%;
     width: auto;
-    z-index: 9;
+    z-index: 99;
     margin: 0 auto;
     display: flex;
     align-self: center;
 }
-
 
 .zoomedImgBackground {
     display: flex;
@@ -645,7 +646,7 @@ textarea:focus-visible {
     height: 100vh;
     width: 100%;
     background-color: rgb(0, 0, 0, 0.5);
-    z-index: 8;
+    z-index: 98;
     position: fixed;
     top: 0;
     left: 0;

@@ -269,7 +269,7 @@ function zoom(img) {
     body.style.overflow = "hidden"
     // Hide posts
     const posts = document.querySelector(".carousel")
-    posts.style.display = "none"
+    posts.style.display = ""
 
 
 }
