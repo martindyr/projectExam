@@ -24,39 +24,41 @@
     <header>
         <!-- Generated in /js/header.js -->
     </header>
-    <main>
-        <div class="sectionHeaderContainer">
+    <main id="contactMain">
+        <div id="contactHeader" class="sectionHeaderContainer">
             <div>
                 <h2>Contact</h2>
             </div>
         </div>
 
-        <div class="contactContainer">
-            <form autocomplete="off" id="form">
-                <div class="fieldContainer">
-                    <label for="nameField">Name:</label>
-                    <input autocomplete="nope" id="nameField" type="text">
-                    <div id="nameError">Must be more than 5 characters long</div>
+        <div class="contact">
+            <div class="contactContainer">
+                <form autocomplete="off" id="form">
+                    <div class="fieldContainer">
+                        <label for="nameField">Name:</label>
+                        <input autocomplete="nope" id="nameField" type="text">
+                        <div id="nameError">Must be more than 5 characters long</div>
+                    </div>
+                    <div class="fieldContainer">
+                        <label for="emailField">Email:</label>
+                        <input autocomplete="nope" id="emailField" type="text">
+                        <div id="emailError">Must be a valid email address</div>
+                    </div>
+                    <div class="fieldContainer">
+                        <label for="subjectField">Subject:</label>
+                        <input autocomplete="nope" id="subjectField" type="text">
+                        <div id="subjectError">Must be more than 15 characters long</div>
+                    </div>
+                    <div class="fieldContainer">
+                        <label for="messageField">Message:</label>
+                        <textarea id="messageField"></textarea>
+                        <div id="messageError">Must be more than 25 characters long</div>
+                    </div>
+                    <button onclick="validateForm()" id="submitBtn">Submit</button>
+                </form>
+                <div class="contactImgContainer">
+                    <img src="/images/contactImg.png" alt="">
                 </div>
-                <div class="fieldContainer">
-                    <label for="emailField">Email:</label>
-                    <input autocomplete="nope" id="emailField" type="text">
-                    <div id="emailError">Must be a valid email address</div>
-                </div>
-                <div class="fieldContainer">
-                    <label for="subjectField">Subject:</label>
-                    <input autocomplete="nope" id="subjectField" type="text">
-                    <div id="subjectError">Must be more than 15 characters long</div>
-                </div>
-                <div class="fieldContainer">
-                    <label for="messageField">Message:</label>
-                    <textarea id="messageField"></textarea>
-                    <div id="messageError">Must be more than 25 characters long</div>
-                </div>
-                <button onclick="validateForm()" id="submitBtn">Submit</button>
-            </form>
-            <div class="contactImgContainer">
-                <img src="/images/contactImg.png" alt="">
             </div>
         </div>
 

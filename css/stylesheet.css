@@ -125,6 +125,11 @@ ul a:hover {
     padding: 0px 20px;
 }
 
+#contactHeader {
+    position: absolute;
+    top: 0;
+}
+
 
 /* CAROUSEL */
 
@@ -318,6 +323,7 @@ ul a:hover {
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
+    align-self: flex-end;
 }
 
 .postListImg {
@@ -413,6 +419,13 @@ ul a:hover {
 
 /* CONTACT */
 
+#contactMain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contactContainer {
     padding-top: 50px;
     width: 80%;
@@ -498,7 +511,7 @@ textarea {
     border: 1px solid wheat;
     border-radius: 4px;
     color: white;
-    padding: 5px;
+    padding: 0px 2px;
 }
 
 input:focus-visible,
