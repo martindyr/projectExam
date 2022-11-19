@@ -1,7 +1,7 @@
 // ==== LOAD MORE DINNERS ===
 
 // API get request link
-const url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts"
+const url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts?per_page=100"
 
 // Button to load more dinners
 const loadDinnersBtn = document.querySelector("#loadDinnersBtn")
@@ -17,6 +17,8 @@ async function getAllPosts() {
         console.log(allPosts)
 
         generateCarousel(allPosts)
+        popularPosts(allPosts)
+
 
     } catch {
         alert("Sorry chef, this website is currenty not working. I'm sorry for the inconvinience this has caused you.")
@@ -28,6 +30,7 @@ getAllPosts()
 
 // CAROUSEL
 const carousel = document.querySelector(".carouselTrackContainer")
+
 function generateCarousel(allPosts) {
     carousel.innerHTML = `
     <div class="carouselTrack">
@@ -42,7 +45,6 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[1].id}">View recepie</a>
                         <div>
                             <p>30 min</p>
-                            <p>Dinner</p>
                             <p>${allPosts[1].slug.charAt().toUpperCase() + allPosts[1].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
@@ -56,22 +58,20 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[2].id}">View recepie</a>
                         <div>
                             <p>40 min</p>
-                            <p>Dinner</p>
                             <p>${allPosts[2].slug.charAt().toUpperCase() + allPosts[2].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[3].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[3].title.rendered}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[13].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[13].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[3].id}">View recepie</a>
+                        <a href="postDetails.html?id=${allPosts[13].id}">View recepie</a>
                         <div>
                             <p>15 min</p>
-                            <p>Dessert</p>
-                            <p>${allPosts[3].slug.charAt().toUpperCase() + allPosts[3].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[13].slug.charAt().toUpperCase() + allPosts[13].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -89,22 +89,20 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[4].id}">View recepie</a>
                         <div>
                             <p>35 min</p>
-                            <p>Dinner</p>
                             <p>${allPosts[4].slug.charAt().toUpperCase() + allPosts[4].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[5].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[5].title.rendered}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[14].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[14].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[5].id}">View recepie</a>
+                        <a href="postDetails.html?id=${allPosts[14].id}">View recepie</a>
                         <div>
                             <p>10 min</p>
-                            <p>Appetizer</p>
-                            <p>${allPosts[5].slug.charAt().toUpperCase() + allPosts[5].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[14].slug.charAt().toUpperCase() + allPosts[14].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +115,6 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[6].id}">View recepie</a>
                         <div>
                             <p>30 min</p>
-                            <p>Dinner</p>
                             <p>${allPosts[6].slug.charAt().toUpperCase() + allPosts[6].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
@@ -136,22 +133,20 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[7].id}">View recepie</a>
                         <div>
                             <p>25 min</p>
-                            <p>Dinner</p>
                             <p>${allPosts[7].slug.charAt().toUpperCase() + allPosts[7].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
                 <div class="carouselCard">
                     <div class="carouselImgContainer">
-                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[8].jetpack_featured_media_url}" alt="">
-                        <p class="carouselImgName">${allPosts[8].title.rendered}</p>
+                        <img onclick="zoom(this)" class="carouselImg" src="${allPosts[15].jetpack_featured_media_url}" alt="">
+                        <p class="carouselImgName">${allPosts[15].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${allPosts[8].id}">View recepie</a>
+                        <a href="postDetails.html?id=${allPosts[15].id}">View recepie</a>
                         <div>
                             <p>20min</p>
-                            <p>Appetizer</p>
-                            <p>${allPosts[8].slug.charAt().toUpperCase() + allPosts[8].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                            <p>${allPosts[15].slug.charAt().toUpperCase() + allPosts[15].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
                 </div>
@@ -164,7 +159,6 @@ function generateCarousel(allPosts) {
                         <a href="postDetails.html?id=${allPosts[9].id}">View recepie</a>
                         <div>
                             <p>10 min</p>
-                            <p>Appetizer</p>
                             <p>${allPosts[9].slug.charAt().toUpperCase() + allPosts[9].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
                         </div>
                     </div>
@@ -251,6 +245,32 @@ function generateCarousel(allPosts) {
         }
     })
 }
+const popularContainer = document.querySelector(".popularContainer")
+
+function popularPosts(allPosts) {
+
+    // Clearing loader
+    popularContainer.innerHTML = ``
+
+    for (let i = 5; i < 8; i++) {
+        popularContainer.innerHTML +=
+                `
+            <div class="carouselCard">
+                <div class="carouselImgContainer">
+                    <img onclick="zoom(this)" class="postListImg" src="${allPosts[i].jetpack_featured_media_url}" alt="">
+                    <p class="carouselImgName">${allPosts[i].title.rendered}</p>
+                </div>
+                <div class="carouselText">
+                    <a href="postDetails.html?id=${allPosts[i].id}">View recepie</a>
+                    <div>
+                        ${allPosts[i].excerpt.rendered}
+                        <p>${allPosts[i].slug.charAt().toUpperCase() + allPosts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+    }
 
 
 
@@ -285,12 +305,3 @@ function quitZoom() {
     const posts = document.querySelector(".carousel")
     posts.style.display = ""
 }
-
-
-
-
-
-
-
-
-
