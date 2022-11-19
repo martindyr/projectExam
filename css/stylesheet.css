@@ -130,6 +130,21 @@ ul a:hover {
     top: 0;
 }
 
+@media only screen and (max-width: 900px) {
+    .sectionHeaderContainer h2 {
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 10;
+        color: wheat;
+        background-color: #24292e;
+        position: relative;
+        left: 20%;
+        top: -15px;
+        display: inline;
+        padding: 0px 16px;
+    }
+}
+
 
 /* CAROUSEL */
 
@@ -287,12 +302,12 @@ ul a:hover {
     
     
     .carouselText div p {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .carouselImgName {
-        padding: 0px;
-        font-size: 10px;
+        padding: 2px;
+        font-size: 12px;
     }
 
     .carouselText a {
@@ -332,36 +347,13 @@ ul a:hover {
 } 
 
 @media only screen and (max-width: 900px) {
-    .carouselButtonLeft {
-        position: relative;
-        left: -5%;
-        top: 20%;
-        transform: translate(-50%, 50%);
-    } 
-    
-     .carouselButtonRight {
-        position: relative;
-        left: 100%;
-        top: -80%;
-        transform: translate(50%, -50%);
+
+    .carousel {
+        display: none;
     }
+
 } 
 
-@media only screen and (max-width: 700px) {
-    .carouselButtonLeft {
-        position: relative;
-        left: -5%;
-        top: 15%;
-        transform: translate(-50%, 50%);
-    }
-    
-    .carouselButtonRight {
-        position: relative;
-        left: 100%;
-        top: -85%;
-        transform: translate(50%, -50%);
-    }
-}
 
 
 
