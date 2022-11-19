@@ -283,6 +283,88 @@ ul a:hover {
     }
 }
 
+@media only screen and (max-width: 1050px) {
+    
+    
+    .carouselText div p {
+        font-size: 10px;
+    }
+    
+    .carouselImgName {
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    .carouselText a {
+        font-size: 12px;
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+
+    .carouselButtonLeft {
+        position: relative;
+        left: -5%;
+        top: 20%;
+        transform: translate(-50%, 50%);
+    }
+    
+    .carouselButtonRight {
+        position: relative;
+        left: 100%;
+        top: -80%;
+        transform: translate(50%, -50%);
+    }
+}
+ @media only screen and (max-width: 1500px) {
+    .carouselButtonLeft {
+        position: relative;
+        left: -5%;
+        top: 25%;
+        transform: translate(-50%, 50%);
+    } 
+    
+     .carouselButtonRight {
+        position: relative;
+        left: 100%;
+        top: -75%;
+        transform: translate(50%, -50%);
+    }
+} 
+
+@media only screen and (max-width: 900px) {
+    .carouselButtonLeft {
+        position: relative;
+        left: -5%;
+        top: 20%;
+        transform: translate(-50%, 50%);
+    } 
+    
+     .carouselButtonRight {
+        position: relative;
+        left: 100%;
+        top: -80%;
+        transform: translate(50%, -50%);
+    }
+} 
+
+@media only screen and (max-width: 700px) {
+    .carouselButtonLeft {
+        position: relative;
+        left: -5%;
+        top: 15%;
+        transform: translate(-50%, 50%);
+    }
+    
+    .carouselButtonRight {
+        position: relative;
+        left: 100%;
+        top: -85%;
+        transform: translate(50%, -50%);
+    }
+}
+
+
+
 /* POSTLIST */
 
 .postListContent {
@@ -364,10 +446,24 @@ ul a:hover {
     padding-top: 50px;
 }
 
+.detailsHeaderImg {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+
+}
+
+.detailsHeaderImg img {
+    width: 100%;
+    height: auto;
+}
+
+
 #ingredientList {
     color: #fff;
-    line-height: 50px;
+    line-height: 40px;
     padding-top: 30px;
+    min-width: 250px;
 }
 
 #recepieDescription {
@@ -378,7 +474,7 @@ ul a:hover {
     width: fit-content;
     margin: 0 auto;
     color: #fff;
-    line-height: 35px;
+    line-height: 25px;
 }
 
 .detailsHeaderLoading {
@@ -415,6 +511,43 @@ ul a:hover {
     height: 16px;
 }
 
+@media only screen and (max-width: 1300px) {
+
+    .detailsHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 100px;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    .detailsHeader {
+        gap: 40px;
+    }
+
+    #recepieDescription {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 35px 0px;
+        width: 80%;
+        margin: 0 auto;
+        color: #fff;
+        line-height: 25px;
+    }
+
+    .detailsMethod {
+        text-align: left;
+
+        padding-top: 50px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
 
 
 /* CONTACT */
@@ -428,19 +561,15 @@ ul a:hover {
 
 .contactContainer {
     padding-top: 50px;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contactImgContainer p {
-    color: #fff;
-    top: 540px;
-    left: 80px;
-}
+
 
 .contactImgContainer {
     position: relative;
@@ -519,6 +648,16 @@ textarea:focus-visible {
     outline: none;
 }
 
+@media only screen and (max-width: 900px) {
+    .contactImgContainer {
+        display: none;
+    }
+
+    form {
+        min-width: 310px;
+    }
+}
+
 /* ABOUT */
 
 .aboutContainer {
@@ -561,8 +700,12 @@ textarea:focus-visible {
 
 @media only screen and (max-width: 800px) {
     .aboutImage img {
-        height: 500px;
-        width: auto;
+        height: 250px;
+        padding-left: 5px;
+    }
+    .aboutText {
+        padding-right: 5px;
+        margin-right: 5px;
     }
 
 }

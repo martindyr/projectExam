@@ -28,25 +28,25 @@ header.innerHTML = `
     </div>
 
     <div id="phoneMenuContainer">
+            <a href="index.html">
+                <img src="/images/home.png" alt=""></img>
+                <p>Home</p>
+            </a>
             <a href="postList.html">
                 <img src="/images/browse.png" alt=""></img>
                 <p>Browse</p>
             </a>
-            <a href="postDetails.html?id=${randomNumber}">
-                <img src="/images/suprise.png" alt=""></img>
-                <p>Suprise</p>
-            </a>
-            <a href="index.html">
-                <img src="/images/home.png" alt=""></img>
-                <p>Home</p>
+            <a href="about.html">
+                <img src="/images/about.png" alt=""></img>
+                <p>About</p>
             </a>
             <a href="contact.html">
                 <img src="/images/contact.png" alt=""></img>
                 <p>Contact</p>
             </a>
-            <a href="about.html">
-                <img src="/images/about.png" alt=""></img>
-                <p>About</p>
+            <a href="postDetails.html?id=${randomNumber}">
+                <img src="/images/suprise.png" alt=""></img>
+                <p>Suprise</p>
             </a>
     </div>
 

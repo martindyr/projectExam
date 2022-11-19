@@ -40,7 +40,9 @@ function createHtml(details) {
         </div>
 
         <div class="detailsHeader">
-            <img onclick="zoom(this)" src="${details.jetpack_featured_media_url}" alt=""></img>
+            <div class="detailsHeaderImg">
+                <img onclick="zoom(this)" src="${details.jetpack_featured_media_url}" alt=""></img>
+            </div>
             <div>
                 <h3>Ingredients</h3>
                 <div id="ingredientList">
