@@ -147,6 +147,10 @@ ul a:hover {
         display: inline;
         padding: 0px 16px;
     }
+
+    #popular {
+    gap: 0px;
+    }
 }
 
 
@@ -329,7 +333,24 @@ ul a:hover {
     }
 }
 
+@media only screen and (max-width: 2000px) {
+    .carousel {
+        height: 800px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .carousel {
+        height: 550px !important;
+    }
+
+}
+
 @media only screen and (max-width: 1600px) {
+    .carousel {
+        height: 650px;
+    }
     .carouselButtonLeft {
         top: 25%;
     }
@@ -347,12 +368,26 @@ ul a:hover {
     .carouselButtonRight {
         top: -75%;
     }
+    .carouselLoading {
+        gap: 20px;
+        width: 100%;
+        height: 600px;
+    }
+    
+    .cardContainerLoading {
+        height: 500px;
+        width: 100%;
+    }
+    
+    .cardLoading {
+        height: 500px;
+    }
 }
 
 
 @media only screen and (max-width: 900px) {
     .carousel{
-        height: 450px;
+        height: 430px !important;
     }
 
     .carouselButtonLeft {
@@ -363,15 +398,34 @@ ul a:hover {
         top: -82%;
         left: 100%;
     }
+
+    .carouselLoading {
+        gap: 20px;
+        width: 100%;
+        height: 450px;
+    }
+    
+    .cardContainerLoading {
+        height: 350px;
+        width: 100%;
+    }
+    
+    .cardLoading {
+        height: 350px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    .carousel {
+        height: 300px !important;
+    }
+
     .carouselButtonLeft {
-        top: 12%;
+        top: 30%;
     }
 
     .carouselButtonRight {
-        top: -88%;
+        top: -70%;
         left: 98%;
     }
 
@@ -388,6 +442,21 @@ ul a:hover {
         font-size: 10px;
         padding-top: 10px;
         padding-left: 15px;
+    }
+
+    .carouselLoading {
+        gap: 20px;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .cardContainerLoading {
+        height: 100px;
+        width: 100%;
+    }
+    
+    .cardLoading {
+        height: 100px;
     }
 }
 
@@ -541,13 +610,7 @@ ul a:hover {
     @media only screen and (max-width: 1300px) {
 
         .detailsHeader {
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 100px;
-            width: 80%;
-            margin: 0 auto;
-            padding-top: 50px;
         }
 
         .detailsHeader {
@@ -555,22 +618,38 @@ ul a:hover {
         }
 
         #recepieDescription {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            padding: 35px 0px;
             width: 80%;
-            margin: 0 auto;
-            color: #fff;
-            line-height: 25px;
         }
 
         .detailsMethod {
             text-align: left;
-
-            padding-top: 50px;
             width: 80%;
             margin: 0 auto;
+        }
+
+
+        .detailsHeaderLoading {
+            flex-direction: column;
+            gap: 100px;
+            width: 40%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+    
+        .detailsImgLoading {
+            background-color: #2B3034;
+            background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+            width: 200px;
+            height: 200px;
+        }
+    
+        .detailsIngredientsLoading {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
         }
 
     }

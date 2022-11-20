@@ -64,7 +64,7 @@ function createAppetizers(posts) {
                     <p class="carouselImgName">${posts[i].title.rendered}</p>
                 </div>
                 <div class="carouselText">
-                    <a href="postDetails.html?id=${posts[i].id}">View recepie</a>
+                    <a href="postDetails.html?id=${posts[i].id}&imgId=${posts[i].featured_media}">View recepie</a>
                     <div>
                         ${posts[i].excerpt.rendered}
                         <p>${posts[i].slug.charAt().toUpperCase() + posts[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
@@ -107,7 +107,7 @@ function loadDinners() {
                     <p class="carouselImgName">${dinnerObject[i].title.rendered}</p>
                 </div>
                 <div class="carouselText">
-                    <a href="postDetails.html?id=${dinnerObject[i].id}">View recepie</a>
+                    <a href="postDetails.html?id=${dinnerObject[i].id}&imgId=${dinnerObject[i].featured_media}">View recepie</a>
                     <div>
                         ${dinnerObject[i].excerpt.rendered}
                         <p>${dinnerObject[i].slug.charAt().toUpperCase() + dinnerObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>
@@ -152,7 +152,7 @@ function loadDesserts() {
                         <p class="carouselImgName">${dessertObject[i].title.rendered}</p>
                     </div>
                     <div class="carouselText">
-                        <a href="postDetails.html?id=${dessertObject[i].id}">View recepie</a>
+                        <a href="postDetails.html?id=${dessertObject[i].id}&imgId=${dessertObject[i].featured_media}">View recepie</a>
                         <div>
                             ${dessertObject[i].excerpt.rendered}
                             <p>${dessertObject[i].slug.charAt().toUpperCase() + dessertObject[i].slug.replace(/-/g, '').replace(/[0-9]/, '').slice(1)}</p>

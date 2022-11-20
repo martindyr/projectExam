@@ -1,6 +1,28 @@
 // Place to display post details
 const detailsContainer = document.querySelector(".postDetailsContainer")
 
+// Get imgId from querystring
+const queryString2 = document.location.search
+const params2 = new URLSearchParams(queryString2)
+const imgId = params2.get("imgId")
+
+// Adding the ID to the imgURL
+imgUrl = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/media/" + imgId
+
+// Using the Dynamic URL to fetch data from spesific image
+async function getPostImgInfo() {
+    try {
+        const response = await fetch(imgUrl)
+        imgDetails = await response.json()
+        console.log("Number 1")
+    } catch {
+        alert("Sorry chef, this website is currenty not working. I'm sorry for the inconvinience this has caused you.")
+    }
+}
+// Store imgDetails 
+let imgDetails = []
+
+
 // Get id from querystring
 const queryString = document.location.search
 const params = new URLSearchParams(queryString)
@@ -9,25 +31,31 @@ const id = params.get("id")
 // Adding the ID to the URL
 url = "https://sd.flowerpoweraveroy.one/wp-json/wp/v2/posts/" + id
 
-// Using the Dynamic URL to fetch data from spesific pokemon
-async function getOnePost() {
+// Using the Dynamic URL to fetch data from spesific post
+async function getPost() {
     try {
         const response = await fetch(url)
-        const details = await response.json()
-
-        console.log('Here is details', details)
-
-        createHtml(details)
-
+        details = await response.json()
+        console.log("Number 2")
     } catch {
         alert("Sorry chef, this website is currenty not working. I'm sorry for the inconvinience this has caused you.")
     }
 }
+// Store imgDetails 
+let details = []
 
-getOnePost()
+async function runFunctions(){
+    await getPostImgInfo()
+    await getPost()
+    createHtml(imgDetails, details)
+}
+runFunctions()
+
+
 
 // Creating the HTML from the spesific URL
-function createHtml(details) {
+function createHtml(imgDetails, details ) {
+    console.log("Number 3")
 
     // Changning the document title to the post name
     document.title = details.title.rendered.replace(/&/g, '').replace(/#/g, '').replace(/[0-9]/g, '')
@@ -41,7 +69,7 @@ function createHtml(details) {
 
         <div class="detailsHeader">
             <div class="detailsHeaderImg">
-                <img onclick="zoom(this)" src="${details.jetpack_featured_media_url}" alt=""></img>
+                <img onclick="zoom(this)" src="${details.jetpack_featured_media_url}" alt="Nicely displayed meal"></img>
             </div>
             <div>
                 <h3>Ingredients</h3>
