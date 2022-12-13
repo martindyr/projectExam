@@ -9,13 +9,19 @@ A webpage that displays food related posts. These posts are fetched from my back
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This is my first school project ever. It is a cross course projects, that means it is constantly changing as we are learning.
+At first the project was to build a website of pure CSS and HTML.
+The website we were building was for a company named Rainy Days. They were a clothing company selling mainly rain proof clothing.
+After we learned JS and CMS, we had to refature alot of the code we made earlier to match our current knowledge.
+We also fetched information from a headless wordpress to display certain information and images about the cothing.
 
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+ This is my third school project. It is a project exam to wrap up my second year of part-time front-end developer class.
+ The exam was to build a website using HTML, CSS and JS, while fetching most of the information from a headless Wordpress.
+ The website displays different food types, what ingridents were used to make the food and a method on how to make it.
+ There is a list of posts. The list is fetched from the CMS. By clicking on one of the posts, I pass the ID as a querysting parameter in the URL and fetching spesific infrmation from the CMS on a different page.
+ 
+ 
+ 
 
 ## Built With
 
@@ -27,24 +33,17 @@ You can add some bullet points if you'd like to:
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/martindyr/projectExam.git
 ```
 
 ### Running
 
 First download extention for Visual Studio Code:
 
-Name: Live Server
-Id: ritwickdey.LiveServer
-Description: Launch a development local Server with live reload feature for static & dynamic pages
-Version: 5.7.9
-Publisher: Ritwick Dey
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+Name: "Live Server" VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
 Once downloaded and activated in VS-code:
 
@@ -55,8 +54,6 @@ Right-click any HTML file in you left panel ---> Click "Open with Live Server
 Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 ## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
 [My Instagram page](https://www.instagram.com/dyrseths/)
 
