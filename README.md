@@ -41,13 +41,11 @@ git clone https://github.com/martindyr/projectExam.git
 
 ### Running
 
-First download extention for Visual Studio Code:
+1. First download extention for Visual Studio Code:
 
-Name: "Live Server" VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+- Name: "Live Server" VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
 
-Once downloaded and activated in VS-code:
-
-Right-click any HTML file in you left panel ---> Click "Open with Live Server
+2. Once downloaded and activated in VS-code: Right-click any HTML file in you left panel ---> Click "Open with Live Server
 
 ## Contributing
 
